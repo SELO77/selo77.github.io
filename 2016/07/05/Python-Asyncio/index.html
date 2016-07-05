@@ -3,18 +3,29 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: 나프다 | SELO&#39;s Autobiography</title>
+    <title>Python- yield, generator, coroutine | SELO&#39;s Autobiography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="SELO&apos;s IT BLOG">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SELO's Autobiography">
-<meta property="og:url" content="https://selo77.github.io/tags/나프다/index.html">
+        <meta name="keywords" content="python,asyncio,yield,generator,coroutine" />
+    
+    <meta name="description" content="서론아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?
+
+비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에 반 밖에 이해">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python- yield, generator, coroutine">
+<meta property="og:url" content="https://selo77.github.io/2016/07/05/Python-Asyncio/index.html">
 <meta property="og:site_name" content="SELO's Autobiography">
-<meta property="og:description" content="SELO&apos;s IT BLOG">
+<meta property="og:description" content="서론아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?
+
+비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에 반 밖에 이해">
+<meta property="og:image" content="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ-llODQKuO5a5mGb3WdoVKmGSWnTx_KgSLzuW0rjYpdN4ptIfBTw">
+<meta property="og:updated_time" content="2016-07-05T15:05:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SELO's Autobiography">
-<meta name="twitter:description" content="SELO&apos;s IT BLOG">
+<meta name="twitter:title" content="Python- yield, generator, coroutine">
+<meta name="twitter:description" content="서론아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?
+
+비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에 반 밖에 이해">
+<meta name="twitter:image" content="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ-llODQKuO5a5mGb3WdoVKmGSWnTx_KgSLzuW0rjYpdN4ptIfBTw">
     
 
     
@@ -126,75 +137,117 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>나프다</em>
+    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/Language/">Language</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Python-Asyncio" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/06/25/iamprogrammer-conference-review/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://iamprogrammersite.files.wordpress.com/2016/06/2016meetup.png?w=840)" alt="나는프로그래머다 - 나프다컨 복기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="https://selo77.github.io/2016/06/25/iamprogrammer-conference-review/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Memorandum/">Memorandum</a>
-            </p>
-            <p class="date"><time datetime="2016-06-25T08:26:51.000Z" itemprop="datePublished">2016-06-25</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/06/25/iamprogrammer-conference-review/">나는프로그래머다 - 나프다컨 복기</a>
+        Python- yield, generator, coroutine
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2016/07/05/Python-Asyncio/" class="article-date">
+    <time datetime="2016-07-05T11:16:31.000Z" itemprop="datePublished">2016-07-05</time>
+</a>
             
-나는프로그래머다 참여 후기 1부제목은 참여 후기지만 실상은 두서없는 주저리가 될 것이다.
-복기나는 프로그래머다 일명 나프다 개발자 컨퍼런스에 참여했다. 컨퍼런스에서 느낀점을 두서 없이 복기 해볼까한다. 자꾸 복기라는 단어를 선택해서 사용하는 것을 이 글을 읽는 분이라면 느꼈을 것이다. 그 이유는 컨퍼런스에서 데니스님이 언급하신 내용 때문이다. 복기란 바둑
-        </p>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/asyncio/">asyncio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coroutine/">coroutine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/generator/">generator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yield/">yield</a></li></ul>
+
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="서론"><a href="#서론" class="headerlink" title="서론"></a>서론</h2><p>아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?</p>
+<p><img src="https://docs.python.org/3/_images/tulip_coro.png"></p>
+<p>비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에 반 밖에 이해를 못하고 코딩을 하는것 같습니다.ㅠㅠ 그래서 이번 기회에 포스팅을 통해 AsyncIO 비동기 모듈을 완벽 정복해보려 합니다.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import asyncio</span><br><span class="line"></span><br><span class="line">from module import module_dao, module_email</span><br><span class="line"></span><br><span class="line">@asyncio.coroutine</span><br><span class="line">def an_asyn_fnc():</span><br><span class="line">  item = yield from another_asynfnc()</span><br><span class="line">  asyncio.async(module_email(item.email))</span><br><span class="line">  return item</span><br><span class="line"></span><br><span class="line">@asyncio.coroutine</span><br><span class="line">def another_asynfnc()</span><br><span class="line">  query = """</span><br><span class="line">  SELECT * FROM users WHERE userID = 'SELO'</span><br><span class="line">  """</span><br><span class="line">  dt_user = yield from module_dao(query)</span><br><span class="line">  if dt_user.get('succeed', None):</span><br><span class="line">    return dt_user['item']</span><br><span class="line">  else:</span><br><span class="line">    raise Exception</span><br></pre></td></tr></table></figure></p>
+<p>(위 코딩은 너무 깊게 생각할 가치가 없습니다……. 하지만 한번 눈으로 보시면 아래 개념들을 이해하는데 조금은 도움이 될듯합니다.)</p>
+<h2 id="본론"><a href="#본론" class="headerlink" title="본론"></a>본론</h2><p>AsyncIO 를 이해하기 위해서 사전에 알고가야 할 개념들이 존재합니다. 바로 오늘 같이 공부해볼 yield 키워드, generator 객체, coroutine 개념입니다. 먼저 yield 키워드와 generator 부터 살펴보겠습니다.</p>
+<p><strong>return 처럼 yield는 값을 반환한다. 하지만 yield는 리턴 값을 비롯한 Context(환경) 포함한 제너레이터라는 객체를 반환하는데 이 제네레이터 객체는 iterable(순환가능) 합니다.</strong> 말이 상당히 야리꾸리 합니다. 처음에는 이해가 안되는게 당연합니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">  print(i, end= <span class="string">","</span>) <span class="comment"># 0,1,2,3,4,</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_range</span><span class="params">(end)</span>:</span></span><br><span class="line">  i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span> i &lt; end:</span><br><span class="line">    <span class="keyword">yield</span> i</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print()</span><br><span class="line">result = custom_range(<span class="number">5</span>)</span><br><span class="line">print(result) <span class="comment"># &lt;generator object custom_range at 0x1017c5a98&gt;</span></span><br></pre></td></tr></table></figure>
+<p>위 custom_range() 함수는 내장함수인 range() 함수를 제너레이터를 이용해 구현한 예입니다.<br>위와 같이 구현된 함수를 코루틴 함수라 합니다. 코루틴? 제너레이터? 여기서는 하나만 기억하고 넘어갑시다. yield가 선언된 함수는 yield를 만나는 순간 제너레이터라는 객체를 반환한다!! 그러면 왜 제너레이터는 순환가능한 것인가? 왜 순환 가능하여야만 하는가? 아래 코드를 보면서 궁금증을 풀어봅시다.</p>
+<h3 id="generator는-순환-가능-왜"><a href="#generator는-순환-가능-왜" class="headerlink" title="generator는 순환 가능!! 왜?"></a>generator는 순환 가능!! 왜?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> result:</span><br><span class="line">  print(i, end=<span class="string">','</span>) <span class="comment"># 0,1,2,3,4,</span></span><br><span class="line">print()</span><br><span class="line">print(list(custom_range(<span class="number">5</span>))) <span class="comment"># [0, 1, 2, 3, 4]</span></span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> custom_range(<span class="number">5</span>)]) <span class="comment"># [0, 1, 2, 3, 4]</span></span><br><span class="line"></span><br><span class="line">generator = custom_range(<span class="number">2</span>)</span><br><span class="line">print(next(generator)) <span class="comment"># 0</span></span><br><span class="line">print(next(generator)) <span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 아래코드는 리스트의 아웃오브인덱스 예외와 유사하다. 더이상 진입점이 없으므로 예외를 발생시킨다.</span></span><br><span class="line"><span class="comment"># print(next(generator)) # raise Exception StopIteration</span></span><br></pre></td></tr></table></figure>
+<p>위 generator 변수에 대입된 custom_range(2) 함수는 yield 키워드에서 값을 반환하고, 다음 next()에 의해 호출될 때까지 해당 라인을 진입점으로 기억해둡니다. 이러한 진입점이 여러 개 인 함수를 코루틴(coroutine) 이라하며, 기존에 우리가 주로 사용하는 코드를 순서대로 실행하다가 return 코드를 만나고 최종 값을 리턴하면서 context를 잃는 방식을 서브루틴(subroutine)이라고 합니다. 결론은 이미 첫째줄에 말씀드렸는데요. <strong><em>“yield를 만나는 순간 Context(환경)를 포함한 제너레이터라는 객체를 반환.” 결국 제너레이터라는 객체는 코루틴이라는 함수가 진입점을 여러 곳 갖고 있기때문에 호출되는 순서에 따라 Context(환경)이 달라지게 됩니다. 이로 인하여 iterable(순환가능) 할 수 밖에 없는 숙명을 띠게 됩니다.</em></strong></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://b.ssut.me/58" target="_blank" rel="external">Python 3, asyncio와 놀아보기</a><br>rochan87@gmail.com 필자의 머릿속.</p>
+<!-- ### Related Posts -->
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -224,6 +277,19 @@
     </div>
     <div class="github-card" data-github="selo77" data-height="" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/06/25/iamprogrammer-conference-review/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">나는프로그래머다 - 나프다컨 복기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -418,11 +484,13 @@
     var disqus_shortname = 'selo77';
     
     
+    var disqus_url = 'https://selo77.github.io/2016/07/05/Python-Asyncio/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
