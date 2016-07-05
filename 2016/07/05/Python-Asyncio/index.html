@@ -19,7 +19,7 @@
 
 비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에">
 <meta property="og:image" content="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ-llODQKuO5a5mGb3WdoVKmGSWnTx_KgSLzuW0rjYpdN4ptIfBTw">
-<meta property="og:updated_time" content="2016-07-05T15:11:19.000Z">
+<meta property="og:updated_time" content="2016-07-05T15:14:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python- yield, generator, coroutine">
 <meta name="twitter:description" content="AsyncIO ?아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?
@@ -174,6 +174,7 @@
 <h3 id="generator는-순환-가능-왜"><a href="#generator는-순환-가능-왜" class="headerlink" title="generator는 순환 가능!! 왜?"></a>generator는 순환 가능!! 왜?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> result:</span><br><span class="line">  print(i, end=<span class="string">','</span>) <span class="comment"># 0,1,2,3,4,</span></span><br><span class="line">print()</span><br><span class="line">print(list(custom_range(<span class="number">5</span>))) <span class="comment"># [0, 1, 2, 3, 4]</span></span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> custom_range(<span class="number">5</span>)]) <span class="comment"># [0, 1, 2, 3, 4]</span></span><br><span class="line"></span><br><span class="line">generator = custom_range(<span class="number">2</span>)</span><br><span class="line">print(next(generator)) <span class="comment"># 0</span></span><br><span class="line">print(next(generator)) <span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 아래코드는 리스트의 아웃오브인덱스 예외와 유사하다. 더이상 진입점이 없으므로 예외를 발생시킨다.</span></span><br><span class="line"><span class="comment"># print(next(generator)) # raise Exception StopIteration</span></span><br></pre></td></tr></table></figure>
 <p>위 generator 변수에 대입된 custom_range(2) 함수는 yield 키워드에서 값을 반환하고, 다음 next()에 의해 호출될 때까지 해당 라인을 진입점으로 기억해둡니다. 이러한 진입점이 여러 개 인 함수를 코루틴(coroutine) 이라하며, 기존에 우리가 주로 사용하는 코드를 순서대로 실행하다가 return 코드를 만나고 최종 값을 리턴하면서 context를 잃는 방식을 서브루틴(subroutine)이라고 합니다. 결론은 이미 첫째줄에 말씀드렸는데요. <strong><em>“yield를 만나는 순간 Context(환경)를 포함한 제너레이터라는 객체를 반환.” 결국 제너레이터라는 객체는 코루틴이라는 함수가 진입점을 여러 곳 갖고 있기때문에 호출되는 순서에 따라 Context(환경)이 달라지게 됩니다. 이로 인하여 iterable(순환가능) 할 수 밖에 없는 숙명을 띠게 됩니다.</em></strong></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://b.ssut.me/58" target="_blank" rel="external">Python 3, asyncio와 놀아보기</a><br>rochan87@gmail.com 필자의 머릿속.</p>
+<p><strong>잘못된 정보에 대한 지적은 언제든지 감사히 받겠습니다.</strong></p>
 <!-- ### Related Posts -->
 
         </div>
