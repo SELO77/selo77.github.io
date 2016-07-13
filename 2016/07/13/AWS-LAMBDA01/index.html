@@ -3,18 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: asyncio | SELO&#39;s Autobiography</title>
+    <title>AWS Lambda를 활용한 HTTP API 만들기 01 | SELO&#39;s Autobiography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="SELO&apos;s IT BLOG">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SELO's Autobiography">
-<meta property="og:url" content="https://selo77.github.io/tags/asyncio/index.html">
+        <meta name="keywords" content="AWS,LAMBDA,API Gateway" />
+    
+    <meta name="description" content="Related Posts">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Lambda를 활용한 HTTP API 만들기 01">
+<meta property="og:url" content="https://selo77.github.io/2016/07/13/AWS-LAMBDA01/index.html">
 <meta property="og:site_name" content="SELO's Autobiography">
-<meta property="og:description" content="SELO&apos;s IT BLOG">
+<meta property="og:description" content="Related Posts">
+<meta property="og:image" content="http://mattharris.org/wp-content/uploads/2016/02/AmazonLambda-200x200.png">
+<meta property="og:updated_time" content="2016-07-13T12:30:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SELO's Autobiography">
-<meta name="twitter:description" content="SELO&apos;s IT BLOG">
+<meta name="twitter:title" content="AWS Lambda를 활용한 HTTP API 만들기 01">
+<meta name="twitter:description" content="Related Posts">
+<meta name="twitter:image" content="http://mattharris.org/wp-content/uploads/2016/02/AmazonLambda-200x200.png">
     
 
     
@@ -126,75 +131,106 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>asyncio</em>
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Cloud/AWS/">AWS</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-AWS-LAMBDA01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/07/05/Python-Asyncio/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ-llODQKuO5a5mGb3WdoVKmGSWnTx_KgSLzuW0rjYpdN4ptIfBTw)" alt="Python- yield, generator, coroutine" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="https://selo77.github.io/2016/07/05/Python-Asyncio/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Python/Language/">Language</a>
-            </p>
-            <p class="date"><time datetime="2016-07-05T11:16:31.000Z" itemprop="datePublished">2016-07-05</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/07/05/Python-Asyncio/">Python- yield, generator, coroutine</a>
+        AWS Lambda를 활용한 HTTP API 만들기 01
         </h1>
     
 
-        <p class="article-excerpt">
-            AsyncIO ?아래 그림은 Python3.4 부터 적용된 asyncIO 라는 강력한 비동기 모듈의 프로세스를 간략하게 설명한 그림입니다. 보자마자 머리가 지끈 지끈 아파오기 시작하시져?
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2016/07/13/AWS-LAMBDA01/" class="article-date">
+    <time datetime="2016-07-13T12:23:23.000Z" itemprop="datePublished">2016-07-13</time>
+</a>
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API-Gateway/">API Gateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LAMBDA/">LAMBDA</a></li></ul>
 
-비동기, 병령처리, 동시성 너무나 자주 듣는 용어들이지만 깔끔하게 머릿속에 정리가 되지않습니다. 매일 같이 아래와 같은 코딩을 비동기 기반 개발을 함에도 불구하고 반에 
-        </p>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00sVuQRAJAT_CLUVsR6CuwcdYbbPV0FlmT9gRbZdg8cF9tKL0Ng"></p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -224,6 +260,19 @@
     </div>
     <div class="github-card" data-github="selo77" data-height="" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -418,11 +467,13 @@
     var disqus_shortname = 'selo77';
     
     
+    var disqus_url = 'https://selo77.github.io/2016/07/13/AWS-LAMBDA01/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
