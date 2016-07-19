@@ -3,27 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>continuous-deployment-docker | SELO&#39;s Autobiography</title>
+    <title>Docker를 이용한 지속적 배포 환경 구축 | SELO&#39;s Autobiography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="python" />
+        <meta name="keywords" content="Docker,CD,DevOps" />
     
-    <meta name="description" content="Reference
-*잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.rochan87@gmail.com
-Related Posts">
+    <meta name="description" content="123456789101112131415161718192021✝  ~/Documents/github/docker_compose_django  vim Dockerfile✝  ~/Documents/github/docker_compose_django  vim requirements.txt✝  ~/Documents/github/docker_compose_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="continuous-deployment-docker">
+<meta property="og:title" content="Docker를 이용한 지속적 배포 환경 구축">
 <meta property="og:url" content="https://selo77.github.io/2016/07/19/continuous-deployment-docker/index.html">
 <meta property="og:site_name" content="SELO's Autobiography">
-<meta property="og:description" content="Reference
-*잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.rochan87@gmail.com
-Related Posts">
-<meta property="og:updated_time" content="2016-07-19T12:33:46.000Z">
+<meta property="og:description" content="123456789101112131415161718192021✝  ~/Documents/github/docker_compose_django  vim Dockerfile✝  ~/Documents/github/docker_compose_django  vim requirements.txt✝  ~/Documents/github/docker_compose_">
+<meta property="og:image" content="http://www.jsitech.com/wp-content/uploads/2015/11/DockerLogo.png">
+<meta property="og:updated_time" content="2016-07-19T17:06:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="continuous-deployment-docker">
-<meta name="twitter:description" content="Reference
-*잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.rochan87@gmail.com
-Related Posts">
+<meta name="twitter:title" content="Docker를 이용한 지속적 배포 환경 구축">
+<meta name="twitter:description" content="123456789101112131415161718192021✝  ~/Documents/github/docker_compose_django  vim Dockerfile✝  ~/Documents/github/docker_compose_django  vim requirements.txt✝  ~/Documents/github/docker_compose_">
+<meta name="twitter:image" content="http://www.jsitech.com/wp-content/uploads/2015/11/DockerLogo.png">
     
 
     
@@ -135,7 +131,7 @@ Related Posts">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/Language/">Language</a>
+    <a class="page-title-link" href="/categories/DevEnv/">DevEnv</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/DevEnv/Docker/">Docker</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -146,7 +142,7 @@ Related Posts">
                 
     
         <h1 class="article-title" itemprop="name">
-        continuous-deployment-docker
+        Docker를 이용한 지속적 배포 환경 구축
         </h1>
     
 
@@ -157,13 +153,28 @@ Related Posts">
     <time datetime="2016-07-19T12:33:46.000Z" itemprop="datePublished">2016-07-19</time>
 </a>
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CD/">CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><em>
-</em><br>*<br>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
-<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+            <p><img src="https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/1026/large/1396373089/docker.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">✝  ~/Documents/github/docker_compose_django  vim Dockerfile</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  vim requirements.txt</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  vim docker-compose.yml</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  docker-compose run web django-admin.py startproject composeexample .</span><br><span class="line">ERROR: yaml.scanner.ScannerError: <span class="keyword">while</span> scanning <span class="keyword">for</span> the next token</span><br><span class="line">found character <span class="string">'\t'</span> that cannot start any token</span><br><span class="line"> <span class="keyword">in</span> <span class="string">"./docker-compose.yml"</span>, line 3, column 1</span><br><span class="line">✘ ✝  ~/Documents/github/docker_compose_django  atom docker-compose.yml</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  docker-compose run web django-admin.py startproject composeexample .</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  ls <span class="_">-l</span></span><br><span class="line">total 32</span><br><span class="line">-rw-r--r--  1 SELO  staff  146  7 19 23:00 Dockerfile</span><br><span class="line">drwxr-xr-x  6 SELO  staff  204  7 19 23:12 composeexample</span><br><span class="line">-rw-r--r--  1 SELO  staff  209  7 19 23:10 docker-compose.yml</span><br><span class="line">-rwxr-xr-x  1 SELO  staff  257  7 19 23:12 manage.py</span><br><span class="line">-rw-r--r--  1 SELO  staff   16  7 19 23:02 requirements.txt</span><br><span class="line">✝  ~/Documents/github/docker_compose_django  <span class="built_in">cd</span> composeexample</span><br><span class="line">✝  ~/Documents/github/docker_compose_django/composeexample  ls</span><br><span class="line">__init__.py settings.py urls.py     wsgi.py</span><br><span class="line">✝  ~/Documents/github/docker_compose_django/composeexample  vim settings.py</span><br><span class="line">✝  ~/Documents/github/docker_compose_django/composeexample  docker-compose up</span><br></pre></td></tr></table></figure>
+<p><a href="https://docs.docker.com/compose/overview/" target="_blank" rel="external">Docker Compose</a> 란 멀티 컨테이너의 실행을 위한 툴입니다. 한번의 실행으로 미리 정의된 모든 서비스를 생성하고 시작시킬수 있습니다.<br><a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0" target="_blank" rel="external">클러스터</a></p>
+<p><a href="http://www.celeryproject.org/" target="_blank" rel="external">Celery</a> 란 Python으로 작성된 비동기 작업 큐입니다. 작업(메시지)을 브로커를 통해 전달하면 하나 이상의 워커가 이를 처리하게 됩니다. 예를 들면 사용자에게 이메일 발송, SMS 발송, 게시물 등록 등 비동기 처리가 필요한 작업을 Celery에게 위임하고 처리할 수 있습니다.</p>
+<p>psycopg2</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://junolab.blogspot.kr/2014/09/fig-docker-fig-django.html" target="_blank" rel="external">Fig - Docker를 이용한 배포 툴 , Fig 를 이용하여 장고(Django) 앱 만들고 배포하기.</a></li>
+<li><a href="http://documents.docker.co.kr/" target="_blank" rel="external">Docker 한글 문서 / 영상 모음집</a></li>
+<li><a href="http://xebia.github.io/cd-with-docker/#/" target="_blank" rel="external">Continuous Delivery with Docker</a></li>
+<li><a href="https://github.com/SELO77/docker_compose_django" target="_blank" rel="external">도커 컴포스 장고 튜토리얼 소스 - github/SELO77</a></li>
+<li><a href="https://medium.com/sunhyoups-story/celery-b96eb337b9cf#.2jmk71j60" target="_blank" rel="external">Celery를 이용한 분산처리 프로세스 작성하기</a></li>
+<li><a href="https://spoqa.github.io/2011/12/24/about-spoqa-server-stack.html" target="_blank" rel="external">스포카 서버의 구조</a></li>
+<li><a href="http://www.slideshare.net/awskorea/aws-container-day" target="_blank" rel="external">AWS Container Day SlideShare</a></li>
+</ul>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2><a href="/2016/07/19/What-is-Docker/" title="Docker 란?">Docker 란?</a>
+<p><br></p>
+
         </div>
         <footer class="article-footer">
             
@@ -294,7 +305,7 @@ Related Posts">
                             <a href="/2016/07/19/continuous-deployment-docker/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://www.jsitech.com/wp-content/uploads/2015/11/DockerLogo.png)" alt="Docker를 이용한 지속적 배포 환경 구축" class="thumbnail-image"></span>
     
     
 </a>
@@ -302,8 +313,8 @@ Related Posts">
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Python/Language/">Language</a></p>
-                            <p class="item-title"><a href="/2016/07/19/continuous-deployment-docker/" class="title">continuous-deployment-docker</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/DevEnv/">DevEnv</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/DevEnv/Docker/">Docker</a></p>
+                            <p class="item-title"><a href="/2016/07/19/continuous-deployment-docker/" class="title">Docker를 이용한 지속적 배포 환경 구축</a></p>
                             <p class="item-date"><time datetime="2016-07-19T12:33:46.000Z" itemprop="datePublished">2016-07-19</time></p>
                         </div>
                     </li>
@@ -397,7 +408,7 @@ Related Posts">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Base/">Base</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Base/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cloud/">Cloud</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Cloud/AWS/">AWS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/">DevEnv</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/Git/">Git</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Memorandum/">Memorandum</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/">NoSQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/Basic/">Basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Language/">Language</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Problem/">Problem</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Base/">Base</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Base/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cloud/">Cloud</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Cloud/AWS/">AWS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/">DevEnv</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/Docker/">Docker</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevEnv/Git/">Git</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Memorandum/">Memorandum</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/">NoSQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/Basic/">Basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Language/">Language</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Problem/">Problem</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -417,7 +428,7 @@ Related Posts">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API-Gateway/">API Gateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CD/">CD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ELKR/">ELKR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMBDA/">LAMBDA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Packet/">Packet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProblemSolvingStrategies/">ProblemSolvingStrategies</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wireshark/">Wireshark</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asyncio/">asyncio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coroutine/">coroutine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generator/">generator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iamprogrammer/">iamprogrammer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yield/">yield</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/개발자모임/">개발자모임</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/나는프로그래머다/">나는프로그래머다</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/나프다/">나프다</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/로그분석/">로그분석</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API-Gateway/">API Gateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CD/">CD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ELKR/">ELKR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMBDA/">LAMBDA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Packet/">Packet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProblemSolvingStrategies/">ProblemSolvingStrategies</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wireshark/">Wireshark</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asyncio/">asyncio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coroutine/">coroutine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generator/">generator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iamprogrammer/">iamprogrammer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yield/">yield</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/개발자모임/">개발자모임</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/나는프로그래머다/">나는프로그래머다</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/나프다/">나프다</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/로그분석/">로그분석</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -427,7 +438,7 @@ Related Posts">
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/API-Gateway/" style="font-size: 10px;">API Gateway</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/CD/" style="font-size: 10px;">CD</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/DevOps/" style="font-size: 15px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELKR/" style="font-size: 10px;">ELKR</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/LAMBDA/" style="font-size: 10px;">LAMBDA</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/NoSQL/" style="font-size: 10px;">NoSQL</a> <a href="/tags/Packet/" style="font-size: 10px;">Packet</a> <a href="/tags/ProblemSolvingStrategies/" style="font-size: 15px;">ProblemSolvingStrategies</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/asyncio/" style="font-size: 10px;">asyncio</a> <a href="/tags/coroutine/" style="font-size: 10px;">coroutine</a> <a href="/tags/generator/" style="font-size: 10px;">generator</a> <a href="/tags/iamprogrammer/" style="font-size: 10px;">iamprogrammer</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/yield/" style="font-size: 10px;">yield</a> <a href="/tags/개발자모임/" style="font-size: 10px;">개발자모임</a> <a href="/tags/나는프로그래머다/" style="font-size: 10px;">나는프로그래머다</a> <a href="/tags/나프다/" style="font-size: 10px;">나프다</a> <a href="/tags/로그분석/" style="font-size: 10px;">로그분석</a>
+            <a href="/tags/API-Gateway/" style="font-size: 10px;">API Gateway</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/CD/" style="font-size: 15px;">CD</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/DevOps/" style="font-size: 20px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/ELKR/" style="font-size: 10px;">ELKR</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/LAMBDA/" style="font-size: 10px;">LAMBDA</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/NoSQL/" style="font-size: 10px;">NoSQL</a> <a href="/tags/Packet/" style="font-size: 10px;">Packet</a> <a href="/tags/ProblemSolvingStrategies/" style="font-size: 15px;">ProblemSolvingStrategies</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/asyncio/" style="font-size: 10px;">asyncio</a> <a href="/tags/coroutine/" style="font-size: 10px;">coroutine</a> <a href="/tags/generator/" style="font-size: 10px;">generator</a> <a href="/tags/iamprogrammer/" style="font-size: 10px;">iamprogrammer</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/yield/" style="font-size: 10px;">yield</a> <a href="/tags/개발자모임/" style="font-size: 10px;">개발자모임</a> <a href="/tags/나는프로그래머다/" style="font-size: 10px;">나는프로그래머다</a> <a href="/tags/나프다/" style="font-size: 10px;">나프다</a> <a href="/tags/로그분석/" style="font-size: 10px;">로그분석</a>
         </div>
     </div>
 
