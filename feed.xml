@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-08-03T01:26:12.000Z</updated>
+  <updated>2016-08-03T13:53:38.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>The Django Begining (MVC Vs MTV)</title>
+    <title>The Django Beginning (MVC Vs MTV)</title>
     <link href="https://selo77.github.io/2016/08/01/what-is-django/"/>
     <id>https://selo77.github.io/2016/08/01/what-is-django/</id>
     <published>2016-08-01T11:44:09.000Z</published>
-    <updated>2016-08-03T01:26:12.000Z</updated>
+    <updated>2016-08-03T13:53:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Django란"><a href="#Django란" class="headerlink" title="Django란?"></a>Django란?</h2><p>장고는 Python에서 사용하는 가장 대표적인 웹 프레임웍 입니다. 자바에 스프링, 루비에 레일스가 있다면 파이썬에는 그 이름도 특이한 <a href="https://www.djangoproject.com/" target="_blank" rel="external">장고</a>!! 가 존재합니다.</p>
 <p>장고는 기본적으로 <a href="https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC" target="_blank" rel="external">MVC Architecture pattern</a>을 따릅니다. MVC 패턴은 웹 프레임웍에서 가장 많이 체택되는 디자인 패턴중 하나로서 역할에 따른 소스 코드의 분리로 많은 장점들을 갖게 됩니다. 장고는 MTV(Model Template View)는 디자인 패턴을 따르지만 이는 MVC 패턴의 일부로 생각합니다. 그럼 먼저 장고의 기본 아키텍처를 보고 넘어가겠습니다.<br><img src="/2016/08/01/what-is-django/Django_mvc.png" alt="Django Basic Architecture" title="Django Basic Architecture"><br><img src="/2016/08/01/what-is-django/MVCBasic.jpg" alt="Spring MVC Architecture" title="Spring MVC Architecture"><br>첫번째 다이어그램은 장고의 MTV 패턴이 적용된 아키텍처이며, 아래는 Java Spring의 MVC 아키텍처 입니다. 사실 장고가 뭔지도 잘 모르는데 아키텍처를 먼저 보는 이유는 무작정 코드를 작성하는 것보다 아키텍처 다이어그램을 머리에 세기고, 코드를 작성하면 데이터 흐름을 어느 정도 이해할수 있기 때문입니다. 또한 세부적인 코드가 전체에서 어느 부분에 영향을 미치게 되는지 이해를 도와줍니다.</p>
