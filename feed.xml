@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-08-03T13:53:38.000Z</updated>
+  <updated>2016-08-11T08:48:26.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>자료구조 한줄 정리(Defining Datastructure to one line!)</title>
+    <link href="https://selo77.github.io/2016/08/11/datastructure-basic/"/>
+    <id>https://selo77.github.io/2016/08/11/datastructure-basic/</id>
+    <published>2016-08-11T07:46:18.000Z</published>
+    <updated>2016-08-11T08:48:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="사파개발자의-자료구조-알고리즘-애증의-관계"><a href="#사파개발자의-자료구조-알고리즘-애증의-관계" class="headerlink" title="사파개발자의 자료구조 알고리즘 애증의 관계"></a>사파개발자의 자료구조 알고리즘 애증의 관계</h2><p>저는 사파 개발자 입니다. 제가 정의한 사파 개발자라함은 비전공자로서 체계적인 학습을 받지 못한 상태에서 개발에 입문한 개발자를 말합니다. 사실 사파와 정파를 나누다는 것 자체가 제 자신이 부족하다는 증거일 것입니다. 하지만 주니어 개발자 단계에서는 사파와 정파의 차이는 분명 존재합니다. 특히 기반지식들에서는 큰 차이와 출발지점 자체가 다릅니다. 그 중 자료구조와 알고리즘은 무림에 갓 입문한 사파 개발자에게 아주 큰 벽이자 애증의 관계입니다. 그 대표로 제 자신이 존재합니다.</p>
+<p>제 경험을 빗대어 얘기해보자면, 회사에서 신규 서비스를 개발할 때 2명의 API 개발자 중 한명으로 투입된 적이 있었습니다. 지금도 입문자 수준이지만 이 당시에는 알고리즘과 자료구조에 대한 지식이 전무했습니다. 하지만 3개월의 개발기간 동안 문제 없이 개발을 진행했고, 오픈까지 성공적으로 완수 했습니다.</p>
+<p>‘그래서 너가 하고 싶은 말이 뭐냐?’</p>
+<p>음 뭐냐면요… 복잡한 알고리즘이 필요 없는 서비스에서는 자료구조와 알고리즘에 대한 이해가 크게 중요하지 않습니다. 특히 트래픽이 폭팔적으로 많지 않다면 남아도는 서버의 자원이 있다면 더더욱 중요하지 않습니다. 오히려 이 단계에서는 알고리즘과 자료구조에 대한 이해 보다는 코드의 재사용성에 대한 이해와 가독성이 훨씬 중요할 것이라 생각됩니다.</p>
+<p>‘뭐지 이 자식 지는 자료구조와 알고리즘에 대해 포스팅하고 있으면서 왜 자꾸 필요없다는 말을 하는거지?!! 뭐 어쩌라고?!’</p>
+<p><strong>어느 정도 수준의 서비스는 자료구조와 알고리즘이 이해 없이도 꾀 잘 만들수 있다는 믿음은 변함없습니다. 어느 정도로 잘 만들어진 제품을 100점 만점에 80점이라 가정했을 때, 자신이 받은 점수가 80점으로 만족하는 개발자라면 자료구조와 알고리즘을 굳이 공부할 필요가 없다 생각합니다. 80점을 만드는 개발자가 나쁜 것이 아닙니다. 어느 상황에서는 100점 보다 80점 제품이 기업에서 요구하는 수준일 수 있습니다. 60점을 80점으로 만드는 비용과 80점을 100점으로 향상시키는 비용은 비교가 되지 않을 만큼 더 클 것이기 때문입니다. 학창시절 만점을 맞기 위해 투자하는 노력과 80점을 맞기 투자한 노력의 차이와 같은 맥락일 것입니다.</strong></p>
+<p>결국 본인이 80점 이상의 제품을 만들기 원하는 기업에 들어가고 싶다거나 본인 스스로 80점이상의 제품을 만들고 싶다면 자료구조와 알고리즘과 같은 기초지식?들이 필요합니다.</p>
+<p>서론이 엄청 길었네요… 자료구조와 알고리즘과 오랜 싸움을 위해서 어느 정도의 동기부여와 각오가 제 스스로 필요했던 것 같습니다. <strong>사파든 정파든 개발자의 길을 선택했고, 100점 짜리 제품을 만들 수 있는 고수가 되기 위해서 저는 알고리즘과 자료구조를 공부합니다!!</strong> 주저리 끝!! 이제 공부하러 갑시다!!</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li>책 - <a href="http://book.naver.com/bookdb/book_detail.nhn?bid=10741278" target="_blank" rel="external">그림으로 배우는 알고리즘 Basic</a></li>
+</ul>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2><ul>
+<li><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a></li>
+<li><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</a>
+<br></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;사파개발자의-자료구조-알고리즘-애증의-관계&quot;&gt;&lt;a href=&quot;#사파개발자의-자료구조-알고리즘-애증의-관계&quot; class=&quot;headerlink&quot; title=&quot;사파개발자의 자료구조 알고리즘 애증의 관계&quot;&gt;&lt;/a&gt;사파개발자의 자료구조 알고리즘 
+    
+    </summary>
+    
+      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
+    
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
+    
+      <category term="datastructure" scheme="https://selo77.github.io/tags/datastructure/"/>
+    
+      <category term="Array" scheme="https://selo77.github.io/tags/Array/"/>
+    
+      <category term="List" scheme="https://selo77.github.io/tags/List/"/>
+    
+      <category term="Stack" scheme="https://selo77.github.io/tags/Stack/"/>
+    
+      <category term="Queue" scheme="https://selo77.github.io/tags/Queue/"/>
+    
+      <category term="Tree" scheme="https://selo77.github.io/tags/Tree/"/>
+    
+      <category term="HashMap" scheme="https://selo77.github.io/tags/HashMap/"/>
+    
+      <category term="Graph" scheme="https://selo77.github.io/tags/Graph/"/>
+    
+  </entry>
   
   <entry>
     <title>The Django Beginning (MVC Vs MTV)</title>
@@ -272,51 +329,6 @@
   </entry>
   
   <entry>
-    <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</title>
-    <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/"/>
-    <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/</id>
-    <published>2016-07-10T05:10:43.000Z</published>
-    <updated>2016-07-11T12:59:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="서론-왜-알고리즘-자료구조를-공부하려-하는가"><a href="#서론-왜-알고리즘-자료구조를-공부하려-하는가" class="headerlink" title="서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?"></a>서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?</h2><p>프로그래밍을 시작하고 거짓말 조금 보태서 하루도 빠짐없이 코딩을 해왔습니다. 그 기간이 오래 되지는 않았지만 쉬지 않고 달려온듯 합니다. 모르는 개념들을 이해하기 위해 닥치는대로 공부하고 어떻게든 해결해왔습니다. 그렇게 현재는 Python을 주 언어로 사용하는 Backend 개발자가 되었고, 현재는 주로 API 개발을 하고 있습니다. 하지만 어느 순간 부터 큰 고민이 생겼습니다. 무언가 만들기 급급한 프로그래밍을 하고 있다는 의구심이었습니다. 아래는 제가 첫 포스트에 썼던 글입니다.</p>
-<blockquote>
-<p>저에게 파이썬은 아름답습니다. 배우기 쉽고, 간결하며 높은 생산성을 갖고 있습니다. 그렇지만 파이썬 언어도 결국은 프로그래머의 하나의 도구에 불과합니다. <strong><em>단순히 프로그래밍을 할 수 있는 것과 좋은 프로그래밍을 하는 것은 하늘과 땅 차이입니다. 결국 프로그래밍의 수준은 언어가 아닌 프로그래머의 역량입니다.</em></strong> 결론적으로 프로그래밍 자체를 아름답게 하기 위해서는 언어에 상관없이 프로그래밍 자체를 공부해야 합니다. 알고리즘, 디자인패턴, 아키텍처, 테스트기법, 동시성, 자료구조 등의 필요한 지식을 유기적으로 이해할 수 있다면 어떤 언어를 사용하더라도 아름다운 프로그래밍을 할 수 있는 개발자가 될 것이라 생각합니다.</p>
-</blockquote>
-<p>지금까지 저는 단순히 프로그래밍을 하는 프로그래머였던것 같습니다. 단순히 프로그래밍을 하는 것이 나쁘다는 문제가 아니라 위에서 언급했듯 저는 아름다운 코드를 만드는 프로그래머가 되고 싶습니다. 이를 위한 첫 시작으로 알고리즘과 자료구조를 기초부터 다져나가려 합니다.</p>
-<p><img src="http://book.algospot.com/static/img/cover1-small.png"></p>
-<p><strong>프로그밍 대회에서배우는 알고리즘 문제해결 전략 (구종만 지음)</strong> 책을 선정해  체계적으로 학습할 계획입니다. 1000페이지가 넘는 다소 버거운 분량임에도 불구하고 이 책을 선정한 이유는 단순히 알고리즘 문제를 소개하고 풀이하는데 그치지 않고, 프로그래밍의 본질인 문제해결이라는 추상적인 개념을 단계를 나누어 체계적으로 학습할 수 있도록 구성되어 있기 때문입니다. 그럼 이제 시작해볼까요!! Let’s go!! Get it!!</p>
-<p><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">알고리즘 문제해결전략 책소개 및 목차</a></p>
-<h2 id="01-문제-해결과-프로그래밍-대회"><a href="#01-문제-해결과-프로그래밍-대회" class="headerlink" title="01 문제 해결과 프로그래밍 대회"></a>01 문제 해결과 프로그래밍 대회</h2><blockquote><p> <strong>프로그래밍은 문제 해결이다</strong><br>프로그램밍을 하기 위해서는 많은 것을 알아야 합니다. 아무 생각 없이 키보드를 두드리는 것처럼 보이는 프로그래머의 머릿속에는 자신이 사용하고 있는 프로그래밍 언어의 특성, 프로그래밍이 동작할 하드웨어와 운영체제에 관한 지식, 사용하고 있는 라이브러리들에 대한 유의 사항들이 회오리치고 있습니다. (중략) 이 와중에 가능한 한 재사용성이 높은 간결한 코드를 작성해야합니다.<br>이렇게 많은 제약조건과 요구사항을 이해하고 최선의 방법을 찾아내는 능력은 좋은 프로그래머가 되기 위해 필수적입니다. 이 책에서는 이런 능력을 문제 해결 능력이라고 부릅니다. 프로그래머가 사용하는 언어나 라이브러리, 알고리즘에 대한 지식 들이 퍼즐의 조각이라면 문제 해결 능력은 적재적소에 퍼즐 조각을 배치하고 이들을 연결해서 큰 그림을 만드는 능력이라고 할 수 있습니다.</p>
-<footer><strong>5page</strong><cite>알고리즘 문제해결전략</cite></footer></blockquote>
-<p><strong>‘01 문제 해결과 프로그래밍 대회’</strong> 장에서는 문제해결이 무엇인지 정의하고 좋은 프로그래밍을 하기 위해 왜 알고리즘이 필요하고 어떻게 공부해야할지 큰 방향을 제시합니다. 다음 2장 <strong>‘문제 해결 개관’</strong> 은 문제 해결 과정을 여러 단계로 나눠 보고 각 단계를 더 잘하기 위한 여러 기술들을 소개합니다. 책을 구입한지 반년만에 첫 발을 내 딛였습니다. 구종만 작가님이 입문자를 위한 커리큘럼을 제시해주셨고, 저는 그걸 따라 공부할 것입니다. 그렇기에 건너뛰는 장이 있을 수 있음을 미리 말씀드립니다. 첫번째시간은 이렇게 가볍게 마무리하고 다음편에 뵙겠습니다. 행복하세요~</p>
-<blockquote>
-<p>Well begun is half done</p>
-</blockquote>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
-<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">(책) 알고리즘 문제해결전략 - 구종만</a></li>
-</ul>
-<p><br><br>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;서론-왜-알고리즘-자료구조를-공부하려-하는가&quot;&gt;&lt;a href=&quot;#서론-왜-알고리즘-자료구조를-공부하려-하는가&quot; class=&quot;headerlink&quot; title=&quot;서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?&quot;&gt;&lt;/a&gt;서론 - 왜 알고리
-    
-    </summary>
-    
-      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
-    
-      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
-    
-    
-      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
-    
-      <category term="ProblemSolvingStrategies" scheme="https://selo77.github.io/tags/ProblemSolvingStrategies/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</title>
     <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/"/>
     <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/</id>
@@ -372,6 +384,51 @@
     <summary type="html">
     
       &lt;h2 id=&quot;2-1-도입&quot;&gt;&lt;a href=&quot;#2-1-도입&quot; class=&quot;headerlink&quot; title=&quot;2.1 도입&quot;&gt;&lt;/a&gt;2.1 도입&lt;/h2&gt;&lt;p&gt;이번장은 추상적인 프로그래밍의 과정을 좀더 체계적으로 수련하기 위한 과정을 여러 단계로 나눠 보고
+    
+    </summary>
+    
+      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
+    
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
+    
+      <category term="ProblemSolvingStrategies" scheme="https://selo77.github.io/tags/ProblemSolvingStrategies/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</title>
+    <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/"/>
+    <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/</id>
+    <published>2016-07-10T05:10:43.000Z</published>
+    <updated>2016-07-11T12:59:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="서론-왜-알고리즘-자료구조를-공부하려-하는가"><a href="#서론-왜-알고리즘-자료구조를-공부하려-하는가" class="headerlink" title="서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?"></a>서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?</h2><p>프로그래밍을 시작하고 거짓말 조금 보태서 하루도 빠짐없이 코딩을 해왔습니다. 그 기간이 오래 되지는 않았지만 쉬지 않고 달려온듯 합니다. 모르는 개념들을 이해하기 위해 닥치는대로 공부하고 어떻게든 해결해왔습니다. 그렇게 현재는 Python을 주 언어로 사용하는 Backend 개발자가 되었고, 현재는 주로 API 개발을 하고 있습니다. 하지만 어느 순간 부터 큰 고민이 생겼습니다. 무언가 만들기 급급한 프로그래밍을 하고 있다는 의구심이었습니다. 아래는 제가 첫 포스트에 썼던 글입니다.</p>
+<blockquote>
+<p>저에게 파이썬은 아름답습니다. 배우기 쉽고, 간결하며 높은 생산성을 갖고 있습니다. 그렇지만 파이썬 언어도 결국은 프로그래머의 하나의 도구에 불과합니다. <strong><em>단순히 프로그래밍을 할 수 있는 것과 좋은 프로그래밍을 하는 것은 하늘과 땅 차이입니다. 결국 프로그래밍의 수준은 언어가 아닌 프로그래머의 역량입니다.</em></strong> 결론적으로 프로그래밍 자체를 아름답게 하기 위해서는 언어에 상관없이 프로그래밍 자체를 공부해야 합니다. 알고리즘, 디자인패턴, 아키텍처, 테스트기법, 동시성, 자료구조 등의 필요한 지식을 유기적으로 이해할 수 있다면 어떤 언어를 사용하더라도 아름다운 프로그래밍을 할 수 있는 개발자가 될 것이라 생각합니다.</p>
+</blockquote>
+<p>지금까지 저는 단순히 프로그래밍을 하는 프로그래머였던것 같습니다. 단순히 프로그래밍을 하는 것이 나쁘다는 문제가 아니라 위에서 언급했듯 저는 아름다운 코드를 만드는 프로그래머가 되고 싶습니다. 이를 위한 첫 시작으로 알고리즘과 자료구조를 기초부터 다져나가려 합니다.</p>
+<p><img src="http://book.algospot.com/static/img/cover1-small.png"></p>
+<p><strong>프로그밍 대회에서배우는 알고리즘 문제해결 전략 (구종만 지음)</strong> 책을 선정해  체계적으로 학습할 계획입니다. 1000페이지가 넘는 다소 버거운 분량임에도 불구하고 이 책을 선정한 이유는 단순히 알고리즘 문제를 소개하고 풀이하는데 그치지 않고, 프로그래밍의 본질인 문제해결이라는 추상적인 개념을 단계를 나누어 체계적으로 학습할 수 있도록 구성되어 있기 때문입니다. 그럼 이제 시작해볼까요!! Let’s go!! Get it!!</p>
+<p><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">알고리즘 문제해결전략 책소개 및 목차</a></p>
+<h2 id="01-문제-해결과-프로그래밍-대회"><a href="#01-문제-해결과-프로그래밍-대회" class="headerlink" title="01 문제 해결과 프로그래밍 대회"></a>01 문제 해결과 프로그래밍 대회</h2><blockquote><p> <strong>프로그래밍은 문제 해결이다</strong><br>프로그램밍을 하기 위해서는 많은 것을 알아야 합니다. 아무 생각 없이 키보드를 두드리는 것처럼 보이는 프로그래머의 머릿속에는 자신이 사용하고 있는 프로그래밍 언어의 특성, 프로그래밍이 동작할 하드웨어와 운영체제에 관한 지식, 사용하고 있는 라이브러리들에 대한 유의 사항들이 회오리치고 있습니다. (중략) 이 와중에 가능한 한 재사용성이 높은 간결한 코드를 작성해야합니다.<br>이렇게 많은 제약조건과 요구사항을 이해하고 최선의 방법을 찾아내는 능력은 좋은 프로그래머가 되기 위해 필수적입니다. 이 책에서는 이런 능력을 문제 해결 능력이라고 부릅니다. 프로그래머가 사용하는 언어나 라이브러리, 알고리즘에 대한 지식 들이 퍼즐의 조각이라면 문제 해결 능력은 적재적소에 퍼즐 조각을 배치하고 이들을 연결해서 큰 그림을 만드는 능력이라고 할 수 있습니다.</p>
+<footer><strong>5page</strong><cite>알고리즘 문제해결전략</cite></footer></blockquote>
+<p><strong>‘01 문제 해결과 프로그래밍 대회’</strong> 장에서는 문제해결이 무엇인지 정의하고 좋은 프로그래밍을 하기 위해 왜 알고리즘이 필요하고 어떻게 공부해야할지 큰 방향을 제시합니다. 다음 2장 <strong>‘문제 해결 개관’</strong> 은 문제 해결 과정을 여러 단계로 나눠 보고 각 단계를 더 잘하기 위한 여러 기술들을 소개합니다. 책을 구입한지 반년만에 첫 발을 내 딛였습니다. 구종만 작가님이 입문자를 위한 커리큘럼을 제시해주셨고, 저는 그걸 따라 공부할 것입니다. 그렇기에 건너뛰는 장이 있을 수 있음을 미리 말씀드립니다. 첫번째시간은 이렇게 가볍게 마무리하고 다음편에 뵙겠습니다. 행복하세요~</p>
+<blockquote>
+<p>Well begun is half done</p>
+</blockquote>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">(책) 알고리즘 문제해결전략 - 구종만</a></li>
+</ul>
+<p><br><br>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;서론-왜-알고리즘-자료구조를-공부하려-하는가&quot;&gt;&lt;a href=&quot;#서론-왜-알고리즘-자료구조를-공부하려-하는가&quot; class=&quot;headerlink&quot; title=&quot;서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?&quot;&gt;&lt;/a&gt;서론 - 왜 알고리
     
     </summary>
     
