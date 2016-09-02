@@ -177,13 +177,6 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/python/</loc>
-        <lastmod>2016-08-03T13:53:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/tags/Django/</loc>
         <lastmod>2016-08-03T13:53:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,36 +240,64 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/Stack/</loc>
-        <lastmod>2016-08-21T09:08:50.000Z</lastmod>
+        <loc>https://selo77.github.io/tags/Datastructure/</loc>
+        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://selo77.github.io/tags/Queue/</loc>
-        <lastmod>2016-08-21T09:08:50.000Z</lastmod>
+        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/Graph/</loc>
-        <lastmod>2016-08-21T09:08:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/Datastructure/</loc>
-        <lastmod>2016-08-21T09:08:50.000Z</lastmod>
+        <loc>https://selo77.github.io/tags/Stack/</loc>
+        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://selo77.github.io/tags/Binary-Tree/</loc>
-        <lastmod>2016-08-21T09:08:50.000Z</lastmod>
+        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Graph/</loc>
+        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/python/</loc>
+        <lastmod>2016-09-02T02:53:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/datetime/</loc>
+        <lastmod>2016-09-02T02:53:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/strftime/</loc>
+        <lastmod>2016-09-02T02:53:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/strptime/</loc>
+        <lastmod>2016-09-02T02:53:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

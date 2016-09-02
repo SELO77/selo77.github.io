@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-08-21T09:08:50.000Z</updated>
+  <updated>2016-09-02T02:53:30.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -16,11 +16,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python-datetime-strftime-example</title>
+    <link href="https://selo77.github.io/2016/09/02/python-datetime-strftime-example/"/>
+    <id>https://selo77.github.io/2016/09/02/python-datetime-strftime-example/</id>
+    <published>2016-09-02T02:49:32.000Z</published>
+    <updated>2016-09-02T02:53:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><em>
+</em><br>*</p>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+<p><br></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Reference&quot;&gt;&lt;a href=&quot;#Reference&quot; class=&quot;headerlink&quot; title=&quot;Reference&quot;&gt;&lt;/a&gt;Reference&lt;/h2&gt;&lt;p&gt;&lt;em&gt;
+&lt;/em&gt;&lt;br&gt;*&lt;/p&gt;
+&lt;p&gt;잘못된 부분에 대한 지적은 언제든지
+    
+    </summary>
+    
+      <category term="Python" scheme="https://selo77.github.io/categories/Python/"/>
+    
+      <category term="Language" scheme="https://selo77.github.io/categories/Python/Language/"/>
+    
+    
+      <category term="python" scheme="https://selo77.github.io/tags/python/"/>
+    
+      <category term="datetime" scheme="https://selo77.github.io/tags/datetime/"/>
+    
+      <category term="strftime" scheme="https://selo77.github.io/tags/strftime/"/>
+    
+      <category term="strptime" scheme="https://selo77.github.io/tags/strptime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>logging-backend0</title>
+    <link href="https://selo77.github.io/2016/09/01/logging-backend0/"/>
+    <id>https://selo77.github.io/2016/09/01/logging-backend0/</id>
+    <published>2016-09-01T04:24:50.000Z</published>
+    <updated>2016-09-01T04:24:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><em>
+</em><br>*</p>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+<p><br></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Reference&quot;&gt;&lt;a href=&quot;#Reference&quot; class=&quot;headerlink&quot; title=&quot;Reference&quot;&gt;&lt;/a&gt;Reference&lt;/h2&gt;&lt;p&gt;&lt;em&gt;
+&lt;/em&gt;&lt;br&gt;*&lt;/p&gt;
+&lt;p&gt;잘못된 부분에 대한 지적은 언제든지
+    
+    </summary>
+    
+      <category term="Python" scheme="https://selo77.github.io/categories/Python/"/>
+    
+      <category term="Language" scheme="https://selo77.github.io/categories/Python/Language/"/>
+    
+    
+      <category term="python" scheme="https://selo77.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>자료구조 기본 - 배열, 리스트, 스택, 큐, 트리, 그래프</title>
     <link href="https://selo77.github.io/2016/08/20/basic-datastructure/"/>
     <id>https://selo77.github.io/2016/08/20/basic-datastructure/</id>
     <published>2016-08-20T05:06:08.000Z</published>
-    <updated>2016-08-21T09:08:50.000Z</updated>
+    <updated>2016-08-21T09:11:07.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="자료구조-개념-정의"><a href="#자료구조-개념-정의" class="headerlink" title="자료구조 개념 정의"></a><strong>자료구조 개념 정의</strong></h2><p>이번 포스팅은 가장 흔히 접할 수 있는 자료구조에 대해 한줄 정리를 하는 간단한 포스팅이 될 예정입니다.</p>
@@ -68,15 +136,15 @@
       <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
     
     
-      <category term="Stack" scheme="https://selo77.github.io/tags/Stack/"/>
+      <category term="Datastructure" scheme="https://selo77.github.io/tags/Datastructure/"/>
     
       <category term="Queue" scheme="https://selo77.github.io/tags/Queue/"/>
     
-      <category term="Graph" scheme="https://selo77.github.io/tags/Graph/"/>
-    
-      <category term="Datastructure" scheme="https://selo77.github.io/tags/Datastructure/"/>
+      <category term="Stack" scheme="https://selo77.github.io/tags/Stack/"/>
     
       <category term="Binary Tree" scheme="https://selo77.github.io/tags/Binary-Tree/"/>
+    
+      <category term="Graph" scheme="https://selo77.github.io/tags/Graph/"/>
     
   </entry>
   
@@ -117,21 +185,21 @@
     
       <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
     
+      <category term="Queue" scheme="https://selo77.github.io/tags/Queue/"/>
+    
+      <category term="Stack" scheme="https://selo77.github.io/tags/Stack/"/>
+    
+      <category term="Graph" scheme="https://selo77.github.io/tags/Graph/"/>
+    
       <category term="datastructure" scheme="https://selo77.github.io/tags/datastructure/"/>
     
       <category term="Array" scheme="https://selo77.github.io/tags/Array/"/>
     
       <category term="List" scheme="https://selo77.github.io/tags/List/"/>
     
-      <category term="Stack" scheme="https://selo77.github.io/tags/Stack/"/>
-    
-      <category term="Queue" scheme="https://selo77.github.io/tags/Queue/"/>
-    
       <category term="Tree" scheme="https://selo77.github.io/tags/Tree/"/>
     
       <category term="HashMap" scheme="https://selo77.github.io/tags/HashMap/"/>
-    
-      <category term="Graph" scheme="https://selo77.github.io/tags/Graph/"/>
     
   </entry>
   
@@ -392,6 +460,51 @@
   </entry>
   
   <entry>
+    <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</title>
+    <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/"/>
+    <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/</id>
+    <published>2016-07-10T05:10:43.000Z</published>
+    <updated>2016-07-11T12:59:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="서론-왜-알고리즘-자료구조를-공부하려-하는가"><a href="#서론-왜-알고리즘-자료구조를-공부하려-하는가" class="headerlink" title="서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?"></a>서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?</h2><p>프로그래밍을 시작하고 거짓말 조금 보태서 하루도 빠짐없이 코딩을 해왔습니다. 그 기간이 오래 되지는 않았지만 쉬지 않고 달려온듯 합니다. 모르는 개념들을 이해하기 위해 닥치는대로 공부하고 어떻게든 해결해왔습니다. 그렇게 현재는 Python을 주 언어로 사용하는 Backend 개발자가 되었고, 현재는 주로 API 개발을 하고 있습니다. 하지만 어느 순간 부터 큰 고민이 생겼습니다. 무언가 만들기 급급한 프로그래밍을 하고 있다는 의구심이었습니다. 아래는 제가 첫 포스트에 썼던 글입니다.</p>
+<blockquote>
+<p>저에게 파이썬은 아름답습니다. 배우기 쉽고, 간결하며 높은 생산성을 갖고 있습니다. 그렇지만 파이썬 언어도 결국은 프로그래머의 하나의 도구에 불과합니다. <strong><em>단순히 프로그래밍을 할 수 있는 것과 좋은 프로그래밍을 하는 것은 하늘과 땅 차이입니다. 결국 프로그래밍의 수준은 언어가 아닌 프로그래머의 역량입니다.</em></strong> 결론적으로 프로그래밍 자체를 아름답게 하기 위해서는 언어에 상관없이 프로그래밍 자체를 공부해야 합니다. 알고리즘, 디자인패턴, 아키텍처, 테스트기법, 동시성, 자료구조 등의 필요한 지식을 유기적으로 이해할 수 있다면 어떤 언어를 사용하더라도 아름다운 프로그래밍을 할 수 있는 개발자가 될 것이라 생각합니다.</p>
+</blockquote>
+<p>지금까지 저는 단순히 프로그래밍을 하는 프로그래머였던것 같습니다. 단순히 프로그래밍을 하는 것이 나쁘다는 문제가 아니라 위에서 언급했듯 저는 아름다운 코드를 만드는 프로그래머가 되고 싶습니다. 이를 위한 첫 시작으로 알고리즘과 자료구조를 기초부터 다져나가려 합니다.</p>
+<p><img src="http://book.algospot.com/static/img/cover1-small.png"></p>
+<p><strong>프로그밍 대회에서배우는 알고리즘 문제해결 전략 (구종만 지음)</strong> 책을 선정해  체계적으로 학습할 계획입니다. 1000페이지가 넘는 다소 버거운 분량임에도 불구하고 이 책을 선정한 이유는 단순히 알고리즘 문제를 소개하고 풀이하는데 그치지 않고, 프로그래밍의 본질인 문제해결이라는 추상적인 개념을 단계를 나누어 체계적으로 학습할 수 있도록 구성되어 있기 때문입니다. 그럼 이제 시작해볼까요!! Let’s go!! Get it!!</p>
+<p><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">알고리즘 문제해결전략 책소개 및 목차</a></p>
+<h2 id="01-문제-해결과-프로그래밍-대회"><a href="#01-문제-해결과-프로그래밍-대회" class="headerlink" title="01 문제 해결과 프로그래밍 대회"></a>01 문제 해결과 프로그래밍 대회</h2><blockquote><p> <strong>프로그래밍은 문제 해결이다</strong><br>프로그램밍을 하기 위해서는 많은 것을 알아야 합니다. 아무 생각 없이 키보드를 두드리는 것처럼 보이는 프로그래머의 머릿속에는 자신이 사용하고 있는 프로그래밍 언어의 특성, 프로그래밍이 동작할 하드웨어와 운영체제에 관한 지식, 사용하고 있는 라이브러리들에 대한 유의 사항들이 회오리치고 있습니다. (중략) 이 와중에 가능한 한 재사용성이 높은 간결한 코드를 작성해야합니다.<br>이렇게 많은 제약조건과 요구사항을 이해하고 최선의 방법을 찾아내는 능력은 좋은 프로그래머가 되기 위해 필수적입니다. 이 책에서는 이런 능력을 문제 해결 능력이라고 부릅니다. 프로그래머가 사용하는 언어나 라이브러리, 알고리즘에 대한 지식 들이 퍼즐의 조각이라면 문제 해결 능력은 적재적소에 퍼즐 조각을 배치하고 이들을 연결해서 큰 그림을 만드는 능력이라고 할 수 있습니다.</p>
+<footer><strong>5page</strong><cite>알고리즘 문제해결전략</cite></footer></blockquote>
+<p><strong>‘01 문제 해결과 프로그래밍 대회’</strong> 장에서는 문제해결이 무엇인지 정의하고 좋은 프로그래밍을 하기 위해 왜 알고리즘이 필요하고 어떻게 공부해야할지 큰 방향을 제시합니다. 다음 2장 <strong>‘문제 해결 개관’</strong> 은 문제 해결 과정을 여러 단계로 나눠 보고 각 단계를 더 잘하기 위한 여러 기술들을 소개합니다. 책을 구입한지 반년만에 첫 발을 내 딛였습니다. 구종만 작가님이 입문자를 위한 커리큘럼을 제시해주셨고, 저는 그걸 따라 공부할 것입니다. 그렇기에 건너뛰는 장이 있을 수 있음을 미리 말씀드립니다. 첫번째시간은 이렇게 가볍게 마무리하고 다음편에 뵙겠습니다. 행복하세요~</p>
+<blockquote>
+<p>Well begun is half done</p>
+</blockquote>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">(책) 알고리즘 문제해결전략 - 구종만</a></li>
+</ul>
+<p><br><br>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;서론-왜-알고리즘-자료구조를-공부하려-하는가&quot;&gt;&lt;a href=&quot;#서론-왜-알고리즘-자료구조를-공부하려-하는가&quot; class=&quot;headerlink&quot; title=&quot;서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?&quot;&gt;&lt;/a&gt;서론 - 왜 알고리
+    
+    </summary>
+    
+      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
+    
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
+    
+      <category term="ProblemSolvingStrategies" scheme="https://selo77.github.io/tags/ProblemSolvingStrategies/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</title>
     <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/"/>
     <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/</id>
@@ -447,51 +560,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;2-1-도입&quot;&gt;&lt;a href=&quot;#2-1-도입&quot; class=&quot;headerlink&quot; title=&quot;2.1 도입&quot;&gt;&lt;/a&gt;2.1 도입&lt;/h2&gt;&lt;p&gt;이번장은 추상적인 프로그래밍의 과정을 좀더 체계적으로 수련하기 위한 과정을 여러 단계로 나눠 보고
-    
-    </summary>
-    
-      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
-    
-      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
-    
-    
-      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
-    
-      <category term="ProblemSolvingStrategies" scheme="https://selo77.github.io/tags/ProblemSolvingStrategies/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</title>
-    <link href="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/"/>
-    <id>https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/</id>
-    <published>2016-07-10T05:10:43.000Z</published>
-    <updated>2016-07-11T12:59:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="서론-왜-알고리즘-자료구조를-공부하려-하는가"><a href="#서론-왜-알고리즘-자료구조를-공부하려-하는가" class="headerlink" title="서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?"></a>서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?</h2><p>프로그래밍을 시작하고 거짓말 조금 보태서 하루도 빠짐없이 코딩을 해왔습니다. 그 기간이 오래 되지는 않았지만 쉬지 않고 달려온듯 합니다. 모르는 개념들을 이해하기 위해 닥치는대로 공부하고 어떻게든 해결해왔습니다. 그렇게 현재는 Python을 주 언어로 사용하는 Backend 개발자가 되었고, 현재는 주로 API 개발을 하고 있습니다. 하지만 어느 순간 부터 큰 고민이 생겼습니다. 무언가 만들기 급급한 프로그래밍을 하고 있다는 의구심이었습니다. 아래는 제가 첫 포스트에 썼던 글입니다.</p>
-<blockquote>
-<p>저에게 파이썬은 아름답습니다. 배우기 쉽고, 간결하며 높은 생산성을 갖고 있습니다. 그렇지만 파이썬 언어도 결국은 프로그래머의 하나의 도구에 불과합니다. <strong><em>단순히 프로그래밍을 할 수 있는 것과 좋은 프로그래밍을 하는 것은 하늘과 땅 차이입니다. 결국 프로그래밍의 수준은 언어가 아닌 프로그래머의 역량입니다.</em></strong> 결론적으로 프로그래밍 자체를 아름답게 하기 위해서는 언어에 상관없이 프로그래밍 자체를 공부해야 합니다. 알고리즘, 디자인패턴, 아키텍처, 테스트기법, 동시성, 자료구조 등의 필요한 지식을 유기적으로 이해할 수 있다면 어떤 언어를 사용하더라도 아름다운 프로그래밍을 할 수 있는 개발자가 될 것이라 생각합니다.</p>
-</blockquote>
-<p>지금까지 저는 단순히 프로그래밍을 하는 프로그래머였던것 같습니다. 단순히 프로그래밍을 하는 것이 나쁘다는 문제가 아니라 위에서 언급했듯 저는 아름다운 코드를 만드는 프로그래머가 되고 싶습니다. 이를 위한 첫 시작으로 알고리즘과 자료구조를 기초부터 다져나가려 합니다.</p>
-<p><img src="http://book.algospot.com/static/img/cover1-small.png"></p>
-<p><strong>프로그밍 대회에서배우는 알고리즘 문제해결 전략 (구종만 지음)</strong> 책을 선정해  체계적으로 학습할 계획입니다. 1000페이지가 넘는 다소 버거운 분량임에도 불구하고 이 책을 선정한 이유는 단순히 알고리즘 문제를 소개하고 풀이하는데 그치지 않고, 프로그래밍의 본질인 문제해결이라는 추상적인 개념을 단계를 나누어 체계적으로 학습할 수 있도록 구성되어 있기 때문입니다. 그럼 이제 시작해볼까요!! Let’s go!! Get it!!</p>
-<p><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">알고리즘 문제해결전략 책소개 및 목차</a></p>
-<h2 id="01-문제-해결과-프로그래밍-대회"><a href="#01-문제-해결과-프로그래밍-대회" class="headerlink" title="01 문제 해결과 프로그래밍 대회"></a>01 문제 해결과 프로그래밍 대회</h2><blockquote><p> <strong>프로그래밍은 문제 해결이다</strong><br>프로그램밍을 하기 위해서는 많은 것을 알아야 합니다. 아무 생각 없이 키보드를 두드리는 것처럼 보이는 프로그래머의 머릿속에는 자신이 사용하고 있는 프로그래밍 언어의 특성, 프로그래밍이 동작할 하드웨어와 운영체제에 관한 지식, 사용하고 있는 라이브러리들에 대한 유의 사항들이 회오리치고 있습니다. (중략) 이 와중에 가능한 한 재사용성이 높은 간결한 코드를 작성해야합니다.<br>이렇게 많은 제약조건과 요구사항을 이해하고 최선의 방법을 찾아내는 능력은 좋은 프로그래머가 되기 위해 필수적입니다. 이 책에서는 이런 능력을 문제 해결 능력이라고 부릅니다. 프로그래머가 사용하는 언어나 라이브러리, 알고리즘에 대한 지식 들이 퍼즐의 조각이라면 문제 해결 능력은 적재적소에 퍼즐 조각을 배치하고 이들을 연결해서 큰 그림을 만드는 능력이라고 할 수 있습니다.</p>
-<footer><strong>5page</strong><cite>알고리즘 문제해결전략</cite></footer></blockquote>
-<p><strong>‘01 문제 해결과 프로그래밍 대회’</strong> 장에서는 문제해결이 무엇인지 정의하고 좋은 프로그래밍을 하기 위해 왜 알고리즘이 필요하고 어떻게 공부해야할지 큰 방향을 제시합니다. 다음 2장 <strong>‘문제 해결 개관’</strong> 은 문제 해결 과정을 여러 단계로 나눠 보고 각 단계를 더 잘하기 위한 여러 기술들을 소개합니다. 책을 구입한지 반년만에 첫 발을 내 딛였습니다. 구종만 작가님이 입문자를 위한 커리큘럼을 제시해주셨고, 저는 그걸 따라 공부할 것입니다. 그렇기에 건너뛰는 장이 있을 수 있음을 미리 말씀드립니다. 첫번째시간은 이렇게 가볍게 마무리하고 다음편에 뵙겠습니다. 행복하세요~</p>
-<blockquote>
-<p>Well begun is half done</p>
-</blockquote>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
-<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=7058764" target="_blank" rel="external">(책) 알고리즘 문제해결전략 - 구종만</a></li>
-</ul>
-<p><br><br>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;서론-왜-알고리즘-자료구조를-공부하려-하는가&quot;&gt;&lt;a href=&quot;#서론-왜-알고리즘-자료구조를-공부하려-하는가&quot; class=&quot;headerlink&quot; title=&quot;서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?&quot;&gt;&lt;/a&gt;서론 - 왜 알고리
     
     </summary>
     
