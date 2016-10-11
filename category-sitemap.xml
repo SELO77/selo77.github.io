@@ -84,22 +84,22 @@
     </url>
 
     <url>
+        <loc>https://selo77.github.io/categories/Base/</loc>
+        <lastmod>2016-10-09T13:49:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://selo77.github.io/categories/Python/</loc>
-        <lastmod>2016-10-03T17:14:07.000Z</lastmod>
+        <lastmod>2016-10-11T16:40:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://selo77.github.io/categories/Python/Language/</loc>
-        <lastmod>2016-10-03T17:14:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/categories/Base/</loc>
-        <lastmod>2016-10-09T13:49:05.000Z</lastmod>
+        <lastmod>2016-10-11T16:40:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

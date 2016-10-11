@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-10-09T13:49:05.000Z</updated>
+  <updated>2016-10-11T16:40:28.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django Custom data Migration</title>
+    <link href="https://selo77.github.io/2016/10/12/django-database-migration1/"/>
+    <id>https://selo77.github.io/2016/10/12/django-database-migration1/</id>
+    <published>2016-10-11T16:37:59.000Z</published>
+    <updated>2016-10-11T16:40:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>django 1.7 기준</p>
+<h3 id="why-needs-custom-migration"><a href="#why-needs-custom-migration" class="headerlink" title="why needs custom migration?"></a>why needs custom migration?</h3><p>서비스 운영을 하다보면 버전이 바뀌거나, 테이블 Schema 가 바뀌거나, 데이터가 뻑나거나 등등 데이터 마이그레이션이 필요한 순간이 있습니다. 가장 쉬운 방법은 스크립트를 작성해 데이터를 수정하는 코드를 작성하는 것입니다. 하지만 장고 프레임웍에서는 그보다 안정적이며 관리하기 쉬운 방법을 제공합니다. 바로 아래에서 살펴볼 custom migration file을 작성하는 것입니다.</p>
+<p>위에서 말했듯 장고에서 제공하는 database migration은 스크립트 작성을 통한 데이터 수정보다 한층 고차원 수준의 migration을 제공합니다. forwards와 backwards 함수를 통해 forward와 backward를 간편하게 구현 해주며, 다양한 옵션들을 통해 선택적 마이그레이션을 가능하게 해줍니다. 이번 포스팅에서는 가장 기본적인 사용법을 살펴보겠습니다.</p>
+<h3 id="make-empty-migration-file"><a href="#make-empty-migration-file" class="headerlink" title="make empty migration file"></a>make empty migration file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py makemigrations --empty &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="forwards-function"><a href="#forwards-function" class="headerlink" title="forwards function"></a>forwards function</h3><p>forwards migrations 요구사항 코드 작성</p>
+<h3 id="backwards-function"><a href="#backwards-function" class="headerlink" title="backwards function"></a>backwards function</h3><p>backwards migrations 요구사항 코드 작성</p>
+<h3 id="base-code"><a href="#base-code" class="headerlink" title="base code"></a>base code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models, migrations</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forwards</span><span class="params">(apps, schema_editor)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backwards</span><span class="params">(apps, schema_editor)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Migration</span><span class="params">(migrations.Migration)</span>:</span></span><br><span class="line"></span><br><span class="line">    dependencies = [</span><br><span class="line">        (<span class="string">'polls'</span>, <span class="string">'0008_auto_20161002_0608'</span>),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    operations = [</span><br><span class="line">        migrations.RunPython(forwards,</span><br><span class="line">                             backwards)</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<h3 id="migrate-commands"><a href="#migrate-commands" class="headerlink" title="migrate commands"></a>migrate commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py migrate [app_name]</span><br></pre></td></tr></table></figure>
+<h3 id="migrate-backwards-command"><a href="#migrate-backwards-command" class="headerlink" title="migrate backwards command"></a>migrate backwards command</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py migrate &lt;app_name&gt; &lt;migration_file_name&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://docs.djangoproject.com/en/1.10/howto/writing-migrations/" target="_blank" rel="external">Writing database migrations</a> - django database migrations official document</li>
+</ul>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다. 포스팅의 첫번째 목적은 작성자의 학습이므로 Context가 틀어지는 경우가 있을수 있씁니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+<p><br></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;django 1.7 기준&lt;/p&gt;
+&lt;h3 id=&quot;why-needs-custom-migration&quot;&gt;&lt;a href=&quot;#why-needs-custom-migration&quot; class=&quot;headerlink&quot; title=&quot;why needs custom mi
+    
+    </summary>
+    
+      <category term="Python" scheme="https://selo77.github.io/categories/Python/"/>
+    
+      <category term="Language" scheme="https://selo77.github.io/categories/Python/Language/"/>
+    
+    
+      <category term="python" scheme="https://selo77.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP Network (제1장 웹과 네트워크의 기본에 대해 알아보자) 대화형 정리</title>
@@ -94,10 +134,10 @@
     <link href="https://selo77.github.io/2016/10/04/python-deference-is-and-equal/"/>
     <id>https://selo77.github.io/2016/10/04/python-deference-is-and-equal/</id>
     <published>2016-10-03T15:04:18.000Z</published>
-    <updated>2016-10-03T17:14:07.000Z</updated>
+    <updated>2016-10-11T16:35:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>Python은 직관적이고 하이레벨 프로그래밍 언어입니다. 이에 맞게 우리가 쓰는 언어에 가까운 문법이 존재합니다. 그 중에 오늘은 is 와 == 의 차이를 공부해보겠습니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>things = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>things[:]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>things == things[:]</span><br><span class="line">Ture</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>things = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>things[:]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>things == things[:]</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
 <p>things와 things[:] 값을 비교하였고, True를 반환 받았습니다. 그렇다면 is를 사용하여 한번더 비교해보겠습니다.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>things <span class="keyword">is</span> things[:]</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
 <p>리턴값이 False 입니다. is 와 == 을 이해하고 사용하시는 분이라면 당연한 결과라 말씀하시겠지만 Python을 사용하여 돈을 벌고 있음에도 불구하고 저는 문제를 마딱드리기 전까지 차이를 모르고 사용했습니다. 물론 직관적으로 어느 부분에 is를 사용하고  ==을 사용해야 할지 판단했기때문에 문제(버그)에 직면하지 않았습니다. 갑자기 “똥인지 된장인지 구분못하고 쓰면안된다” 는 저의 개발 스승님 말씀이 떠오르네요…</p>

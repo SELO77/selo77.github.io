@@ -3,20 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: ProblemSolvingStrategies | SELO&#39;s Autobiography</title>
+    <title>Django Custom data Migration | SELO&#39;s Autobiography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="SELO&apos;s IT BLOG">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SELO's Autobiography">
-<meta property="og:url" content="https://selo77.github.io/tags/ProblemSolvingStrategies/index.html">
-<meta property="og:site_name" content="SELO's Autobiography">
-<meta property="og:description" content="SELO&apos;s IT BLOG">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SELO's Autobiography">
-<meta name="twitter:description" content="SELO&apos;s IT BLOG">
+        <meta name="keywords" content="python" />
     
-    <link rel="canonical" href="https://selo77.github.io/tags/ProblemSolvingStrategies/"/>
+    <meta name="description" content="django 1.7 기준
+why needs custom migration?서비스 운영을 하다보면 버전이 바뀌거나, 테이블 Schema 가 바뀌거나, 데이터가 뻑나거나 등등 데이터 마이그레이션이 필요한 순간이 있습니다. 가장 쉬운 방법은 스크립트를 작성해 데이터를 수정하는 코드를 작성하는 것입니다. 하지만 장고 프레임웍에서는 그보다 안정적이며 관리하기 쉬운">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django Custom data Migration">
+<meta property="og:url" content="https://selo77.github.io/2016/10/12/django-database-migration1/index.html">
+<meta property="og:site_name" content="SELO's Autobiography">
+<meta property="og:description" content="django 1.7 기준
+why needs custom migration?서비스 운영을 하다보면 버전이 바뀌거나, 테이블 Schema 가 바뀌거나, 데이터가 뻑나거나 등등 데이터 마이그레이션이 필요한 순간이 있습니다. 가장 쉬운 방법은 스크립트를 작성해 데이터를 수정하는 코드를 작성하는 것입니다. 하지만 장고 프레임웍에서는 그보다 안정적이며 관리하기 쉬운">
+<meta property="og:image" content="https://selo77.github.io/2016/08/01/what-is-django/jango.png">
+<meta property="og:updated_time" content="2016-10-11T16:40:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django Custom data Migration">
+<meta name="twitter:description" content="django 1.7 기준
+why needs custom migration?서비스 운영을 하다보면 버전이 바뀌거나, 테이블 Schema 가 바뀌거나, 데이터가 뻑나거나 등등 데이터 마이그레이션이 필요한 순간이 있습니다. 가장 쉬운 방법은 스크립트를 작성해 데이터를 수정하는 코드를 작성하는 것입니다. 하지만 장고 프레임웍에서는 그보다 안정적이며 관리하기 쉬운">
+<meta name="twitter:image" content="https://selo77.github.io/2016/08/01/what-is-django/jango.png">
+    
+    <link rel="canonical" href="https://selo77.github.io/2016/10/12/django-database-migration1/"/>
 
     
 
@@ -138,118 +146,120 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>ProblemSolvingStrategies</em>
+    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/Language/">Language</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-django-database-migration1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://book.algospot.com/static/img/cover1-small.png)" alt="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Base/">Base</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Base/Algorithm/">Algorithm</a>
-            </p>
-            <p class="date"><time datetime="2016-07-10T05:10:43.000Z" itemprop="datePublished">2016-07-10</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>
+        Django Custom data Migration
         </h1>
     
 
-        <p class="article-excerpt">
-            2.1 도입이번장은 추상적인 프로그래밍의 과정을 좀더 체계적으로 수련하기 위한 과정을 여러 단계로 나눠 보고 각 단계를 더 잘하기 위한 전반적인 기술들을 소개합니다. 특히 구체적인 체계없이 프로그래밍을 시작하는 저와 같은 프로그래머들에게 깨닮을 줍니다. 첫번째장에서 알고리즘의 필요성과 공부를 위한 마음을 가다듬었다면 이번장에서는 앞으로 배우게될 것들에 대한
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
+            </header>
         
-        <a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://book.algospot.com/static/img/cover1-small.png)" alt="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="https://selo77.github.io/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/">0</span>
-    
-</span>
-
-    
+        <div class="article-subtitle">
+            <a href="/2016/10/12/django-database-migration1/" class="article-date">
+    <time datetime="2016-10-11T16:37:59.000Z" itemprop="datePublished">2016-10-12</time>
 </a>
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Base/">Base</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Base/Algorithm/">Algorithm</a>
-            </p>
-            <p class="date"><time datetime="2016-07-10T05:10:43.000Z" itemprop="datePublished">2016-07-10</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</a>
-        </h1>
-    
+        <div class="article-entry" itemprop="articleBody">
+            <p>django 1.7 기준</p>
+<h3 id="why-needs-custom-migration"><a href="#why-needs-custom-migration" class="headerlink" title="why needs custom migration?"></a>why needs custom migration?</h3><p>서비스 운영을 하다보면 버전이 바뀌거나, 테이블 Schema 가 바뀌거나, 데이터가 뻑나거나 등등 데이터 마이그레이션이 필요한 순간이 있습니다. 가장 쉬운 방법은 스크립트를 작성해 데이터를 수정하는 코드를 작성하는 것입니다. 하지만 장고 프레임웍에서는 그보다 안정적이며 관리하기 쉬운 방법을 제공합니다. 바로 아래에서 살펴볼 custom migration file을 작성하는 것입니다.</p>
+<p>위에서 말했듯 장고에서 제공하는 database migration은 스크립트 작성을 통한 데이터 수정보다 한층 고차원 수준의 migration을 제공합니다. forwards와 backwards 함수를 통해 forward와 backward를 간편하게 구현 해주며, 다양한 옵션들을 통해 선택적 마이그레이션을 가능하게 해줍니다. 이번 포스팅에서는 가장 기본적인 사용법을 살펴보겠습니다.</p>
+<h3 id="make-empty-migration-file"><a href="#make-empty-migration-file" class="headerlink" title="make empty migration file"></a>make empty migration file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py makemigrations --empty &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="forwards-function"><a href="#forwards-function" class="headerlink" title="forwards function"></a>forwards function</h3><p>forwards migrations 요구사항 코드 작성</p>
+<h3 id="backwards-function"><a href="#backwards-function" class="headerlink" title="backwards function"></a>backwards function</h3><p>backwards migrations 요구사항 코드 작성</p>
+<h3 id="base-code"><a href="#base-code" class="headerlink" title="base code"></a>base code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models, migrations</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forwards</span><span class="params">(apps, schema_editor)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backwards</span><span class="params">(apps, schema_editor)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Migration</span><span class="params">(migrations.Migration)</span>:</span></span><br><span class="line"></span><br><span class="line">    dependencies = [</span><br><span class="line">        (<span class="string">'polls'</span>, <span class="string">'0008_auto_20161002_0608'</span>),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    operations = [</span><br><span class="line">        migrations.RunPython(forwards,</span><br><span class="line">                             backwards)</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<h3 id="migrate-commands"><a href="#migrate-commands" class="headerlink" title="migrate commands"></a>migrate commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py migrate [app_name]</span><br></pre></td></tr></table></figure>
+<h3 id="migrate-backwards-command"><a href="#migrate-backwards-command" class="headerlink" title="migrate backwards command"></a>migrate backwards command</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python manage.py migrate &lt;app_name&gt; &lt;migration_file_name&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://docs.djangoproject.com/en/1.10/howto/writing-migrations/" target="_blank" rel="external">Writing database migrations</a> - django database migrations official document</li>
+</ul>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다. 포스팅의 첫번째 목적은 작성자의 학습이므로 Context가 틀어지는 경우가 있을수 있씁니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+<p><br></p>
 
-        <p class="article-excerpt">
-            서론 - 왜 알고리즘, 자료구조를 공부하려 하는가?프로그래밍을 시작하고 거짓말 조금 보태서 하루도 빠짐없이 코딩을 해왔습니다. 그 기간이 오래 되지는 않았지만 쉬지 않고 달려온듯 합니다. 모르는 개념들을 이해하기 위해 닥치는대로 공부하고 어떻게든 해결해왔습니다. 그렇게 현재는 Python을 주 언어로 사용하는 Backend 개발자가 되었고, 현재는 주로 A
-        </p>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -279,6 +289,19 @@ ga('send', 'pageview');
     </div>
     <div class="github-card" data-github="selo77" data-height="" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/09/HTTP-1-TCP-IP-Layer/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">HTTP Network (제1장 웹과 네트워크의 기본에 대해 알아보자) 대화형 정리</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -473,11 +496,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'selo77';
     
     
+    var disqus_url = 'https://selo77.github.io/2016/10/12/django-database-migration1/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
