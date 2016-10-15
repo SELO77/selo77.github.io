@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://selo77.github.io/2016/10/15/django-pyenv-virtualenv-settings/</loc>
+        <lastmod>2016-10-15T06:44:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://selo77.github.io/2016/10/12/django-database-migration1/</loc>
         <lastmod>2016-10-11T16:40:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
