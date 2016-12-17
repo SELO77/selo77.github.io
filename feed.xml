@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-10-15T06:44:35.000Z</updated>
+  <updated>2016-12-17T08:18:17.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -14,6 +14,112 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Concurrency in Python</title>
+    <link href="https://selo77.github.io/2016/12/11/Concurrency-in-Python/"/>
+    <id>https://selo77.github.io/2016/12/11/Concurrency-in-Python/</id>
+    <published>2016-12-10T15:14:24.000Z</published>
+    <updated>2016-12-17T08:18:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>안녕하세요. SELO 입니다. 저희 회사에서는 격주 단위로 개발세미나를 진행하는데요. 개발자가 자유롭게 주제를 선택하여 세미나를 진행한답니다. 최근에 개인적으로 관심을 두고 있던 Concurrency에 관하여 세미나를 진행하게 되었고, 그 내용을 정리해보려 합니다.</p>
+<p>전반적인 내용은 다음과 같습니다. Concurrency의 개념을 정리하고, Python에서의 Concurrency 구현에 대하여 살펴보겠습니다.</p>
+<h2 id="Concurrency-and-Parallelism"><a href="#Concurrency-and-Parallelism" class="headerlink" title="Concurrency and Parallelism"></a>Concurrency and Parallelism</h2><p>동시성은 무엇이고, 병렬성은 무엇일까요? 잠시 생각해보고, 스스로 답변해보세요. 명확하게 정리가 되신다면 이 파트는 뛰어넘으셔도 됩니다. 그렇지 않으시다면 저와 같이 정리를 한번 해봅시다.</p>
+<blockquote>
+<p>컴퓨터 과학에서 동시성이란 프로그램, 알고리즘 또는 문제가 분리될수 있는 속성을 말합니다. 즉, 프로그램 또는 알고리즘들이 무작위나 부분적 순서를 갖고 실행 되더라도 동일한 최종결과를 얻습니다.<br><a href="https://en.wikipedia.org/wiki/Concurrency_(computer_science" target="_blank" rel="external"> Concurrency (Computer Science) - wikipedia</a>)</p>
+</blockquote>
+<p>위키피디아에 정의된 동시성 정의는 위와 같습니다. 개념자체가 추상적이기 때문에 한 번에 이해하기가 조금 어렵습니다. 조금 더 구체적으로 정의하자면 동시에 두 개 이상의 작업을 다루는 구조를 동시성이라 합니다. 그렇다면 병렬성은 무엇일까요? 우리가 알고 있는 병렬성도 분명히 두개 이상의 작업이 함께 다루어지는 것 아닌가요?</p>
+<blockquote>
+<p>컴퓨터 과학에서 병렬처리란 많은 계산이나 프로세스 실행이 동시에 수행되는 일종의 실행 방식입니다.<br><a href="https://en.wikipedia.org/wiki/Parallel_computing" target="_blank" rel="external">Parallel computing - wikipedia</a></p>
+</blockquote>
+<p>한마디로 병렬성은 두 개 이상의 연산이 동시에 처리되는 실행 방식입니다. 동시성 보다는 개념이 더 뚜렷해보이지 않나요? 그 이유는 차차 알게되겠지만 <strong>병렬성은 일종의 실행방식에 대한 개념이고, 동시성은 구조에 관한 개념이기 때문에 훨씬 더 추상적입니다. 그리고 비동기, 병렬처리 등과 같은 동시성 구현을 위한 처리나 실행 방식의 개념을 포괄합니다.</strong></p>
+<p>아래 그림은 동시성과 병렬성의 이해를 위한 극단적인 예시입니다. 하지만 혼동되는 개념을 정리하는데 도움이 됩니다. 그림을 보아도 혼동이 된다면 아래 정리만 기억해주세요.</p>
+<img src="/2016/12/11/Concurrency-in-Python/Concurrency_vs_Parallelism.png" alt="Concurrency Vs Parallelism" title="Concurrency Vs Parallelism">
+<p><strong>동시성은 동시에 많은 것을 다루는 구조</strong><br><strong>병렬성은 동시에 많은 것을 실행하는 처리방식</strong></p>
+<h2 id="Implement-Concurrency-in-Python"><a href="#Implement-Concurrency-in-Python" class="headerlink" title="Implement Concurrency in Python"></a>Implement Concurrency in Python</h2><p>이번 부분에서는 파이썬에서 동시성 구현해보고, 각 방법의 차이를 이해하는 시간을 갖겠습니다.</p>
+<h3 id="threading"><a href="#threading" class="headerlink" title="threading"></a>threading</h3><p>동시성 구현에서 개발자에게 가장 익숙한 것은 스레드가 아닐까 생각됩니다. 스레드는 기본적으로 독립적인 실행 흐름을 갖고, 프로그램의 메모리를 공유합니다. 스레드의 개념을 짚고 넘어가는 이유는 차후 얘기하게 될 파이썬에서의 스레드가 갖게 되는 제약을 명확히 이해하기 위해서입니다.</p>
+<ul>
+<li><strong>cpu/0basic.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cpu/0basic.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_work</span><span class="params">(start, end, result)</span>:</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(start, end):</span><br><span class="line">        sum += i</span><br><span class="line">    result[<span class="string">'sum'</span>] = sum</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    START, END = <span class="number">0</span>, <span class="number">100000000</span></span><br><span class="line">    result = &#123;&#125;</span><br><span class="line">    st = time.time()</span><br><span class="line">    do_work(START, END, result)</span><br><span class="line">    print(<span class="string">'== sum:&#123;&#125; running time &#123;:.4f&#125;s'</span>.format(result[<span class="string">'sum'</span>],time.time() - st))</span><br><span class="line">    <span class="comment"># == sum:4999999950000000 running time 8.6880s</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>위 코드는 단순히 0 부터 100000000(일만)까지 순차적으로 더한 후 실행시간을 출력하는 프로그램입니다. 동시성이 구현되지 않은 절차식 코드입니다. 제 컴퓨터 기준 8.6s의 실행시간이 출력되었습니다.</p>
+<p>반면 아래 코드는 파이썬 <code>threading</code> 모듈을 사용해서 두개의 스레드를 생성한 후 더하기 작업을 반씩 나누어 처리하는 코드입니다. 예측되는 실행시간은 절차식 코드의 실행시간의 절반인 4~5초 언저리가 될것입니다.</p>
+<ul>
+<li><strong>cpu/1thread.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cpu/1thread.py</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_work</span><span class="params">(start, end, result)</span>:</span></span><br><span class="line">    <span class="comment"># print(os.getpid())</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(start, end):</span><br><span class="line">        sum += i</span><br><span class="line">    result.append(sum)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    START, END = <span class="number">0</span>, <span class="number">100000000</span></span><br><span class="line">    result = list()</span><br><span class="line">    st = time.time()</span><br><span class="line">    th1 = Thread(target=do_work, args=(START, int(END/<span class="number">2</span>), result))</span><br><span class="line">    th2 = Thread(target=do_work, args=(int(END/<span class="number">2</span>), END, result))</span><br><span class="line">    th1.start()</span><br><span class="line">    th2.start()</span><br><span class="line">    th1.join()</span><br><span class="line">    th2.join()</span><br><span class="line">    print(<span class="string">'==sum:&#123;&#125;, running time &#123;:.4f&#125;s'</span>.format(sum(result),time.time() - st))</span><br><span class="line">    <span class="comment"># ==sum:4999999950000000, running time 8.9179s</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>실행 결과는 우리가 예상했던 바와는 너무도 다릅니다. 출력된 실행시간을 보면 8.9s로 스레드를 구현하지 않은 코드보다 조금 더 느립니다. 스레드가 정상적으로 작동하였다면 이런 결과는 나올수가 없겠죠.<br>이유는 바로 GIL(Global Interpreter Lock) 이라는 놈때문 입니다.</p>
+<blockquote>
+<p>Global interpreter lock (GIL) is a mechanism used in computer language interpreters to synchronize the execution of threads so that only one native thread can execute at a time.<br><a href="https://en.wikipedia.org/wiki/Global_interpreter_lock" target="_blank" rel="external">Global interpreter lock - Wikipedia</a></p>
+</blockquote>
+<p>GIL에 대해서 다루는 포스팅은 아니기에 짧게 설명하고 넘어가도록하겠습니다. GIL은 한번에 한 스레드만 파이썬 바이트 코드를 실행하도록 강제합니다. 그렇기 때문에 단일 파이썬 프로세스가 동시에 다중 CPU 코어를 사용할 수 없습니다. 그렇다면 제대로 쓰지도 못하는 스레드 모듈을 왜 만들었을까요?</p>
+<p>GIL에 대한 자세한 내용은 아래 문서를 참고하세요.<br><a href="http://www.dabeaz.com/python/UnderstandingGIL.pdf" target="_blank" rel="external">UnderstandingGIL</a></p>
+<ul>
+<li><strong>io/0basic.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># io/0basic.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line"></span><br><span class="line">urls = [<span class="string">'http://www.naver.com'</span>,</span><br><span class="line">       <span class="string">'https://www.google.com'</span>,</span><br><span class="line">       <span class="string">'https://www.apple.com'</span>,</span><br><span class="line">       <span class="string">'http://www.bing.com/'</span>] * <span class="number">10</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch</span><span class="params">(url)</span>:</span></span><br><span class="line">    print(<span class="string">'Start with'</span>, url)</span><br><span class="line">    urlopen(url)</span><br><span class="line">    print(<span class="string">'End'</span>, url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">st = time.time()</span><br><span class="line"><span class="keyword">for</span> url <span class="keyword">in</span> urls:</span><br><span class="line">    fetch(url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">"duration(s):&#123;:.4f&#125;"</span>.format(time.time() - st))</span><br><span class="line"><span class="comment"># duration(s):6.0583</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>이번 코드에서는 40개의 url에 해당하는 http network 작업을 절차적으로 실행합니다. 대략 6.0s 실행시간이 걸렸습니다. 아래코드는 같은 문제를 4개의 thread를 생성 작업하는 방식입니다.</p>
+<ul>
+<li><strong>io/1thread.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line"></span><br><span class="line">urls = [<span class="string">'http://www.naver.com'</span>,</span><br><span class="line">       <span class="string">'https://www.google.com'</span>,</span><br><span class="line">       <span class="string">'https://www.apple.com'</span>,</span><br><span class="line">       <span class="string">'http://www.bing.com/'</span>] * <span class="number">10</span></span><br><span class="line">NUM_WORKERS = <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch</span><span class="params">(url)</span>:</span></span><br><span class="line">    print(<span class="string">'Start with'</span>, url)</span><br><span class="line">    urlopen(url)</span><br><span class="line">    print(<span class="string">'End'</span>, url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">st = time.time()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> ThreadPoolExecutor(max_workers=NUM_WORKERS) <span class="keyword">as</span> th:</span><br><span class="line">    <span class="keyword">for</span> url <span class="keyword">in</span> urls:</span><br><span class="line">        th.submit(fetch, url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">"duration(s):&#123;:.4f&#125;, NUM_WORKERS:&#123;&#125;"</span>.format((time.time() - st), NUM_WORKERS))</span><br><span class="line"><span class="comment"># duration(s):1.6696, NUM_WORKERS:4</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>첫번째 <code>cpu/1thread.py</code>는 스레드가 정삭적을 작동하는것 같아 보이지 않습니다. 스레드를 사용했음에도 불구하고 절차코드보다 느린 실행시간이 걸렸습니다. 그렇다면 이번 <code>io/1thread.py</code> 코드도 스레드가 정상적으로 작동하지 않았을까요? 아닙니다. 출력된 내용을 보면 1.6s의 실행시간이 걸렸습니다. 절차형 코드 6.0s 비해 1/4 실행시간이 걸렸습니다. 왜 이런 차이가 생기는 걸까요?</p>
+<p>코드가 해결하려하는 핵심 작업의 종류가 다르기 때문입니다. 첫번째 스레드 코드는 CPU-Bound 작업이 중심이였고, 두번째 스레드 코드는 IO-Handling이 주된 작업이었습니다. 각 작업의 특성을 생각해본다면 원인을 유추해낼수 있습니다. CPU-Bound 작업은 연산이 지속적으로 이루어지깄때문에 싱글 스레드 기반에서는 Context-switching 할 여유가 없습니다. 하지만 IO-Bound 작업은 대부분의 시간을 대기시간으로 보내게 되고 이때 GIL은 해제됩니다. 해제됨과 동시에 다른 스레드가 실행됩니다.</p>
+<p>그렇다면 파이썬에서 CPU-Bound 작업을 동시 처리할 수 있는 무언가는 없을까요?</p>
+<h3 id="multiprocessing"><a href="#multiprocessing" class="headerlink" title="multiprocessing"></a>multiprocessing</h3><ul>
+<li><strong>cpu/2process.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process, Queue</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_work</span><span class="params">(start, end, result)</span>:</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(int(start), int(end)):</span><br><span class="line">        sum += i</span><br><span class="line">    result.put(sum)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    START, END = <span class="number">0</span>, <span class="number">100000000</span></span><br><span class="line">    result = Queue()</span><br><span class="line">    st = time.time()</span><br><span class="line">    pr1 = Process(target=do_work, args=(START, END / <span class="number">2</span>, result))</span><br><span class="line">    pr2 = Process(target=do_work, args=(END / <span class="number">2</span>, END, result))</span><br><span class="line">    pr1.start()</span><br><span class="line">    pr2.start()</span><br><span class="line">    pr1.join()</span><br><span class="line">    pr2.join()</span><br><span class="line">    result.put(<span class="string">'STOP'</span>)</span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        tmp = result.get()</span><br><span class="line">        <span class="keyword">if</span> tmp == <span class="string">'STOP'</span>: <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>: sum += tmp</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'==sum:&#123;&#125;, running time &#123;:.4f&#125;s'</span>.format(sum, time.time() - st)) <span class="comment">#  3.9502s</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>cpu/1thread.py</code>의 실행시간 8.9s에 비해 3.9s라는 1/2 정도의 실행시간이 걸렸습니다. 실행시간 단축이 주는 의미를 풀어보자면 동시에 두 가지 작업이 함께 진행되었을 것입니다. 위 코드가 CPU-Bound 중심의 작업을 처리하기때문에 특별히 wating time을 갖지 않습니다. 결국 두개의 프로세스가 계속적으로 연산을 처리하지 않았다면 <code>cpu/1thread.py</code>와 비슷한 실행시간이 걸렸을 것입니다.</p>
+<p><code>multiprocessing</code> 은 스레드 대신 하위 프로세스를 사용하여 GIL 효율적으로 회피합니다. 결론부터 말하자면 우리가 원하던 병렬처리가 가능해집니다. 각 프로세스는 독립된 메모리공간을 갖고 동시에 진행되며, 결국 프로그래머는 컴퓨터 상의 다중 프로세스를 완벽하게 활용할 수 있게됩니다. (물론 완벽한 병렬처리가 진행되려면 컴퓨터가 다중코어여야 합니다.)</p>
+<h3 id="asyncio"><a href="#asyncio" class="headerlink" title="asyncio"></a>asyncio</h3><p>asyncio 는 파이썬 3.4 에서 새롭게 추가된 비동기 I/O 패키지입니다. asyncio 패키지는 이벤트루프에 운용되는 코루틴을 이용해서 동시성을 구현합니다. 이번 포스팅에 담기에는 방대한 내용이기에 구현 방법만 살펴보겠습니다. 자세한 내용은 아래 링크를 살펴보시면 도움이 될것입니다.</p>
+<p><a href="http://masnun.com/2015/11/13/python-generators-coroutines-native-coroutines-and-async-await.html" target="_blank" rel="external">PYTHON: GENERATORS, COROUTINES, NATIVE COROUTINES AND ASYNC/AWAIT
+</a><br><a href="http://b.ssut.me/58" target="_blank" rel="external">Python3, asyncio와 놀아보기</a></p>
+<ul>
+<li><strong>io/2asyncio.py</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> aiohttp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urls = [<span class="string">'http://www.naver.com'</span>,</span><br><span class="line">       <span class="string">'https://www.google.com'</span>,</span><br><span class="line">       <span class="string">'https://www.apple.com'</span>,</span><br><span class="line">       <span class="string">'http://www.bing.com/'</span>] * <span class="number">10</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@asyncio.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch</span><span class="params">(url)</span>:</span></span><br><span class="line">    print(<span class="string">'Start with'</span>, url)</span><br><span class="line">    res = <span class="keyword">yield</span> <span class="keyword">from</span> aiohttp.request(<span class="string">'GET'</span>, url)</span><br><span class="line">    res.close()</span><br><span class="line">    print(<span class="string">'End'</span>, url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">st = time.time()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch_all</span><span class="params">(urls)</span>:</span></span><br><span class="line">    loop = asyncio.get_event_loop()</span><br><span class="line">    fetchs = [fetch(url) <span class="keyword">for</span> url <span class="keyword">in</span> urls]</span><br><span class="line">    wait_coro = asyncio.wait(fetchs)</span><br><span class="line">    loop.run_until_complete(wait_coro)</span><br><span class="line">    loop.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fetch_all(urls)</span><br><span class="line">print(<span class="string">"duration(s):&#123;:.4f&#125;"</span>.format(time.time() - st))</span><br><span class="line"><span class="comment"># duration(s):0.8603</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(참고: <code>asyncio</code>는 TCP와 UDP 프로토콜만 지원합니다. HTTP 등의 프로토콜을 지원하려면 <code>aiohttp</code>와 같은 서드파티 패키지가 필요합니다.)</p>
+<p><code>asycnio</code>는 아래 그림과 같은 방식의 이벤트 루프를 중심으로 운용되며 이벤트 루프가 큐에 있는 코루틴을 하나씩 활성화하는 단일 스레드 프로그램입니다. 이러한 개념을 기억해주시고 코드를 살펴보면 이해하는데 도움이 될것입니다.</p>
+<img src="/2016/12/11/Concurrency-in-Python/eventloop.png" alt="EventLoop" title="EventLoop">
+<p>각 url을 파라미터로 받는 <code>fetch()</code> coroutine 을 list에 담아 <code>asyncio.wait(fetchs)</code> 함수에 넘겨줍니다. <code>asyncio.wait()</code>은 넘겨준 리스트의 coroutine을 이벤트루프가 스케줄링 가능한 Task Object로 warapping합니다. 이벤트 루프가 테스크를 모두 완료하고 프로그램은 종료됩니다. 실행시간은 0.9s가 걸렸습니다. 절차식 코드나 스레드 코드에 비하면 엄청난 속도 개선입니다. 물론 스레드 워커수를 가용가능한 최대치로 설정 후 실행한다면 속도는 비슷하게 나오리라 예상됩니다. 하지만 스레드로 복잡한 프로그램을  구현해 보셨다면 스레드의 스케줄링이 얼마나 어려운 작업인지 잘 아실 것입니다. 락을 잠고, 블락당하지 않게 해야 합니다. 하지만 코루틴기반의 <code>asyncio</code>의 사용은 개발자가 <code>yield</code> 명시만으로도 스케줄링이 가능하고 방해받지 않습니다.</p>
+<p>실제로 <code>asyncio</code>는 내부적으로는 커널 수준까지 내려가는 저수준 스레드에 의존하지만, 패키지 사용자 즉 개발자는 스레드를 생성하거나 내부적으로 스레드가 사용되고 있다는 사실을 알 필요가 없습니다. 어플리케이션 수준에서 단지 우리가 작성한 코드가 블로킹되지 않게 보장하면 되며, 이벤트 루프가 동시성에 대한 나머지 모든 작업을 처리해줍니다. 결국 개발자가 스레드를 관리할 필요성을 제거함으로써 멀티스레드 시스템보다 더 많은 동시성 연결을 쉽게 관리할 수 있습니다.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>파이썬에서의 동시성 구현 방법들에 관하여 살펴보았습니다. 동시성 관련 개념들은 점점 더 중요해지고 있습니다. 그 이유는 다들 아시겠지만 과거 개발환경은 대부분 멀티쓰레딩 환경에서 하나의 CPU를 효율적으로 공유하도록 만드는데 초점이 있었습니다. 하지만 현재 멀티코어 시대에는 기존 방식으로는 성능향상의 한계가 있습니다. 그렇기에 병렬, 비동기 프로그래밍, 분산 컴퓨팅, 함수형 프로그래밍, 빅테이터, 인공지능 등 다양한 기술들이 동시성 패러다임과 함께 발달하고 있습니다.</p>
+<p>Concurrent in Python 한정적인 주제로 진행했지만, 제가 전달하고 싶은 내용은 단순히 구현하는 방법이 아닌 <strong>동시성 관점과 사고를 갖고 개발할 수 있는 개발자가 되자!</strong> 입니다.</p>
+<p>PS. 이렇게 인생의 첫 세미나가 이렇게 끝났네요. 느낀 점은 사용하는 것과 아는 것은 다르고, 가르침은 또 다른 범위의 문제라는 것을 깨달았습니다. 분량조절과 범위선정은 정말 어려웠습니다. 관련된 개념은 너무 많은데 주어진 시간에 정확한 내용을 전달하려면 무엇을 간략히 하고 정리해야할지… 미숙함이 많은 세미나였고, 내용이었지만 개인적으로는 정말 좋은 경험이 되었습니다. 40km 유격 행군보다 몇배는 힘든 세미나 준비였지만 이 문장을 끝으로 마무리하겠습니다. 감사합니다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://www.slideshare.net/dabeaz/an-introduction-to-python-concurrency" target="_blank" rel="external">An Introduction to Python Concurrency</a></li>
+<li><a href="http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/" target="_blank" rel="external">Async python</a></li>
+<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=8781382" target="_blank" rel="external">책: Fluent Python</a></li>
+</ul>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다. 포스팅의 첫번째 목적은 작성자의 학습이므로 Context가 틀어지는 경우가 있을 수 있습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2><ul>
+<li><a href="/2016/07/24/python-asyncio-Tasks/" title="python-asyncio-Tasks">python-asyncio-Tasks</a></li>
+<li><a href="/2016/07/05/Python-Asyncio/" title="Python- yield, generator, coroutine">Python- yield, generator, coroutine</a>
+<br></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;안녕하세요. SELO 입니다. 저희 회사에서는 격주 단위로 개발세미나를 진행하는데요. 개발자가 자유롭게 주제를 선택하여 세미나를 진행한답니다. 최근에 개인적으로 관심을 두고 있던 Concurrency에 관하여 세미나를 진행하게 되었고, 그 내용을
+    
+    </summary>
+    
+      <category term="Python" scheme="https://selo77.github.io/categories/Python/"/>
+    
+      <category term="Language" scheme="https://selo77.github.io/categories/Python/Language/"/>
+    
+    
+      <category term="python" scheme="https://selo77.github.io/tags/python/"/>
+    
+      <category term="asyncio" scheme="https://selo77.github.io/tags/asyncio/"/>
+    
+      <category term="thread" scheme="https://selo77.github.io/tags/thread/"/>
+    
+      <category term="multiprocess" scheme="https://selo77.github.io/tags/multiprocess/"/>
+    
+  </entry>
   
   <entry>
     <title>Keybox 개발기1 (pyenv와 virtualenv django 개발환경 셋팅)</title>
@@ -389,7 +495,7 @@
     <link href="https://selo77.github.io/2016/08/11/datastructure-basic/"/>
     <id>https://selo77.github.io/2016/08/11/datastructure-basic/</id>
     <published>2016-08-11T07:46:18.000Z</published>
-    <updated>2016-08-20T05:48:08.000Z</updated>
+    <updated>2016-12-17T08:17:21.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="자료구조-알고리즘은-꼭-필요한-것인가"><a href="#자료구조-알고리즘은-꼭-필요한-것인가" class="headerlink" title="자료구조 알고리즘은 꼭 필요한 것인가?"></a>자료구조 알고리즘은 꼭 필요한 것인가?</h2><p>저는 사파 개발자 입니다. 제가 정의한 사파 개발자라함은 비전공자로서 체계적인 학습을 받지 못한 상태에서 개발에 입문한 개발자를 말합니다. 사실 사파와 정파를 나누다는 것 자체가 제 자신이 부족하다는 증거일 것입니다. 하지만 주니어 개발자 단계에서는 사파와 정파의 차이는 분명 존재합니다. 특히 기반지식들에서는 큰 차이와 출발지점 자체가 다릅니다. 그 중 자료구조와 알고리즘은 무림에 갓 입문한 사파 개발자에게 아주 큰 벽이자 애증의 관계입니다. 그 대표로 제 자신이 존재합니다.</p>
 <p>제 경험을 빗대어 얘기해보자면, 회사에서 신규 서비스를 개발할 때 2명의 API 개발자 중 한명으로 투입된 적이 있었습니다. 지금도 입문자 수준이지만 이 당시에는 알고리즘과 자료구조에 대한 지식이 전무했습니다. 하지만 3개월의 개발기간 동안 문제 없이 개발을 진행했고, 오픈까지 성공적으로 완수 했습니다.</p>
@@ -401,7 +507,8 @@
 <p>서론이 엄청 길었네요… 자료구조와 알고리즘과 오랜 싸움을 위해서 어느 정도의 동기부여와 각오가 제 스스로 필요했던 것 같습니다. <strong>사파든 정파든 개발자의 길을 선택했고, 100점 짜리 제품을 만들 수 있는 고수가 되기 위해서 저는 알고리즘과 자료구조를 공부합니다!!</strong> 주저리 끝!! 이제 공부하러 갑시다!!</p>
 <p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
 <h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2><ul>
-<li><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a></li>
+<li><p><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies-02Solving-Problem-Overview/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 02문제 해결 개관</a>,</p>
+</li>
 <li><a href="/2016/07/10/Algorithm-Algorithmic-Problem-Solving-Strategies/" title="Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회">Algorithmic Problem Solving Strategies(알고리즘 문제해결전략) - 01문제해결과 프로그래밍 대회</a>
 </li>
 </ul>
@@ -846,13 +953,13 @@
     
       <category term="python" scheme="https://selo77.github.io/tags/python/"/>
     
+      <category term="asyncio" scheme="https://selo77.github.io/tags/asyncio/"/>
+    
       <category term="yield" scheme="https://selo77.github.io/tags/yield/"/>
     
       <category term="generator" scheme="https://selo77.github.io/tags/generator/"/>
     
       <category term="coroutine" scheme="https://selo77.github.io/tags/coroutine/"/>
-    
-      <category term="asyncio" scheme="https://selo77.github.io/tags/asyncio/"/>
     
   </entry>
   

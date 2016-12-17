@@ -142,13 +142,6 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/asyncio/</loc>
-        <lastmod>2016-07-24T09:07:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/tags/ELKR/</loc>
         <lastmod>2016-08-03T01:22:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -198,48 +191,6 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/Algorithm/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/datastructure/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/Array/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/List/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/Tree/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/HashMap/</loc>
-        <lastmod>2016-08-20T05:48:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/tags/Datastructure/</loc>
         <lastmod>2016-08-21T09:11:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,28 +198,7 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/Queue/</loc>
-        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/Stack/</loc>
-        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/tags/Binary-Tree/</loc>
-        <lastmod>2016-08-21T09:11:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/tags/Graph/</loc>
         <lastmod>2016-08-21T09:11:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -345,13 +275,6 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/tags/python/</loc>
-        <lastmod>2016-10-11T16:40:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/tags/django/</loc>
         <lastmod>2016-10-15T06:44:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -368,6 +291,97 @@
     <url>
         <loc>https://selo77.github.io/tags/virtualenv/</loc>
         <lastmod>2016-10-15T06:44:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Algorithm/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Queue/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Stack/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Graph/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/datastructure/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Array/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/List/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/Tree/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/HashMap/</loc>
+        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/python/</loc>
+        <lastmod>2016-12-17T08:18:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/asyncio/</loc>
+        <lastmod>2016-12-17T08:18:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/thread/</loc>
+        <lastmod>2016-12-17T08:18:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/tags/multiprocess/</loc>
+        <lastmod>2016-12-17T08:18:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
