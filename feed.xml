@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://selo77.github.io/"/>
-  <updated>2016-12-21T15:35:13.000Z</updated>
+  <updated>2017-03-04T07:07:36.000Z</updated>
   <id>https://selo77.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>INTRODUCTION TO ALGORITHMS STUDY</title>
+    <link href="https://selo77.github.io/2017/03/04/INRODUCTION-TO-ALGORITHMS-0/"/>
+    <id>https://selo77.github.io/2017/03/04/INRODUCTION-TO-ALGORITHMS-0/</id>
+    <published>2017-03-04T07:02:34.000Z</published>
+    <updated>2017-03-04T07:07:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><em>
+</em><br>*</p>
+<p>잘못된 부분에 대한 지적은 언제든지 감사히 받겠습니다. 포스팅의 첫번째 목적은 작성자의 학습이므로 Context가 틀어지는 경우가 있을 수 있습니다.<br><a href="rochan87@gmail.com">rochan87@gmail.com</a></p>
+<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+<p><br></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Reference&quot;&gt;&lt;a href=&quot;#Reference&quot; class=&quot;headerlink&quot; title=&quot;Reference&quot;&gt;&lt;/a&gt;Reference&lt;/h2&gt;&lt;p&gt;&lt;em&gt;
+&lt;/em&gt;&lt;br&gt;*&lt;/p&gt;
+&lt;p&gt;잘못된 부분에 대한 지적은 언제든지
+    
+    </summary>
+    
+      <category term="Base" scheme="https://selo77.github.io/categories/Base/"/>
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/categories/Base/Algorithm/"/>
+    
+    
+      <category term="Algorithm" scheme="https://selo77.github.io/tags/Algorithm/"/>
+    
+      <category term="Datastructure" scheme="https://selo77.github.io/tags/Datastructure/"/>
+    
+  </entry>
   
   <entry>
     <title>Python data model</title>

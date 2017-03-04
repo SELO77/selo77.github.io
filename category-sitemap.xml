@@ -77,20 +77,6 @@
     </url>
 
     <url>
-        <loc>https://selo77.github.io/categories/Base/</loc>
-        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://selo77.github.io/categories/Base/Algorithm/</loc>
-        <lastmod>2016-12-17T08:17:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://selo77.github.io/categories/Python/</loc>
         <lastmod>2016-12-21T15:35:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -100,6 +86,20 @@
     <url>
         <loc>https://selo77.github.io/categories/Python/Language/</loc>
         <lastmod>2016-12-21T15:35:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/categories/Base/</loc>
+        <lastmod>2017-03-04T07:07:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://selo77.github.io/categories/Base/Algorithm/</loc>
+        <lastmod>2017-03-04T07:07:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
